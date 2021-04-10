@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className='gradient-background'>
           <NavBar/>
           <div style={{ paddingTop: '20px', paddingBottom: '30px' }}>
             <Switch>

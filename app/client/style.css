@@ -5,6 +5,10 @@
   font-family: 'Londrina Solid', cursive;
 }
 
+.gradient-background {
+  background: linear-gradient(to bottom, rgba(255, 247, 223, 1), rgba(255, 178, 134, 1)) no-repeat center center fixed !important;
+}
+
 .landing-green-background {
   background-color: #376551;
   color: white;
