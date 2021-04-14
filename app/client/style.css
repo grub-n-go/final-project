@@ -5,9 +5,13 @@
   font-family: 'Londrina Solid', cursive;
 }
 
+.grub-n-go-orange{
+  color:  #FF0000;
+}
+
 .nav-bar-bowfolio-green {
   color:  #FF0000;
-  font-family: 'Tangerine', cursive;
+  font-family: cursive,'Tangerine';
 }
 
 .landing-white-background {
