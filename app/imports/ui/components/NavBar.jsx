@@ -20,11 +20,10 @@ class NavBar extends React.Component {
           {this.props.currentUser ? (
             <Menu.Item as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home" key='home'>Home</Menu.Item>
           ) : ''}
-          {/* eslint-disable-next-line max-len */}
           <Menu.Item as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
             <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Venues</span></Menu.Item>
           <Menu.Item as={NavLink} id="todaysMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Todays Menu</span></Menu.Item>
+            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Today&apos;s Menu</span></Menu.Item>
           <Menu.Item as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
             <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Top Picks</span></Menu.Item>
           <Menu.Item>

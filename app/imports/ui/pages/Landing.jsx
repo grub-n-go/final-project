@@ -12,7 +12,7 @@ class Landing extends React.Component {
           </Container>
         </div>
         <div className='landing-white-background'>
-          <Header style={{ color: '#376551' }} as='h1' textAlign='center'>TODAY&amp;apos;S SPECIAL</Header>
+          <Header style={{ color: '#376551' }} as='h1' textAlign='center'>TODAY&apos;S SPECIAL</Header>
           <Grid container stackable columns='equal' textAlign='center'>
             <Grid.Column>
               <Item.Image size='medium'
