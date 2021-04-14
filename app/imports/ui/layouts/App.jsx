@@ -8,11 +8,11 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import Home from '../pages/Home';
-import Profiles from '../pages/Profiles';
+import Venues from '../pages/Venues';
 import AddProject from '../pages/AddProject';
-import Projects from '../pages/Projects';
+import TodaysMenu from '../pages/TodaysMenu';
 import Filter from '../pages/Filter';
-import Interests from '../pages/Interests';
+import TodaysPicks from '../pages/TodaysPicks';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -29,9 +29,9 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Landing}/>
               <ProtectedRoute path="/home" component={Home}/>
-              <Route path="/profiles" component={Profiles}/>
-              <Route path="/projects" component={Projects}/>
-              <Route path="/interests" component={Interests}/>
+              <Route path="/venues" component={Venues}/>
+              <Route path="/todaysMenu" component={TodaysMenu}/>
+              <Route path="/todaysPicks" component={TodaysPicks}/>
               <ProtectedRoute path="/addproject" component={AddProject}/>
               <ProtectedRoute path="/filter" component={Filter}/>
               <Route path="/signin" component={Signin}/>
