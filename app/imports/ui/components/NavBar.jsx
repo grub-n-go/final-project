@@ -42,7 +42,7 @@ class NavBar extends React.Component {
           <Menu.Item>
             {this.props.currentUser === '' ? (
               <span style={{ fontWeight: 800, fontSize: '20px' }}>
-                <Dropdown id="login-dropdown" className='nav-bar-bowfolio-green' text="Login" icon={'user'}>
+                <Dropdown id="login-dropdown" text="Login" icon={'user'}>
                   <Dropdown.Menu>
                     <Dropdown.Item id="login-dropdown-sign-in" icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
                     <Dropdown.Item id="login-dropdown-sign-up" icon="add user" text="Sign Up" as={NavLink} exact to="/signup"/>
