@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Container, Header, Item} from 'semantic-ui-react';
+import { Grid, Container, Header, Item } from 'semantic-ui-react';
 
 /** Renders a color-blocked static landing page. */
 class Landing extends React.Component {
@@ -7,15 +7,16 @@ class Landing extends React.Component {
     return (
       <div className='welcome-background'>
         <div>
-          <Container textAlign='center' style={{ paddingTop: '300px'}}>
-            <Header as='h1' inverted style={{fontSize: '250px'}}>ALOHA!</Header>
+          <Container textAlign='center' style={{ paddingTop: '300px' }}>
+            <Header as='h1' inverted style={{ fontSize: '250px' }}>ALOHA!</Header>
           </Container>
         </div>
         <div className='landing-white-background'>
-          <Header style={{ color: '#376551' }} as='h1' textAlign='center'>TODAY'S SPECIAL</Header>
+          <Header style={{ color: '#376551' }} as='h1' textAlign='center'>TODAY&amp;apos;S SPECIAL</Header>
           <Grid container stackable columns='equal' textAlign='center'>
             <Grid.Column>
-              <Item.Image size='medium' src="https://thesurfingpighawaii.com/wp-content/uploads/2018/04/449d5a_57f413dec56944eabdb7b35c6497df23mv2_d_3669_3669_s_4_2.jpg"/>
+              <Item.Image size='medium'
+                src="https://thesurfingpighawaii.com/wp-content/uploads/2018/04/449d5a_57f413dec56944eabdb7b35c6497df23mv2_d_3669_3669_s_4_2.jpg"/>
             </Grid.Column>
             <Grid.Column>
 
@@ -26,7 +27,7 @@ class Landing extends React.Component {
         </div>
 
         <div className='green-gradient'>
-          <Container style={{ paddingTop: '200px'}}>
+          <Container style={{ paddingTop: '200px' }}>
           </Container>
         </div>
 
