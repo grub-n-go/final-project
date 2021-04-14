@@ -27,6 +27,7 @@
 
 .welcome-background {
   background-size: cover;
+  background-attachment: fixed;
   background-image: url(https://www.hawaiipokefob.com/img/slider3.jpg);
 }
 
