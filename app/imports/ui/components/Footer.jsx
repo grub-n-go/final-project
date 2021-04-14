@@ -33,7 +33,7 @@ class Footer extends React.Component {
                     <Form.Field>
                       <input placeholder='Let us know'/>
                     </Form.Field>
-                    <Button color='blue' type='Subscribe'>Subscribe</Button>
+                    <Button color='blue' type='Subscribe'>Email</Button>
                   </Form>
                 </Grid.Column>
 
@@ -42,7 +42,7 @@ class Footer extends React.Component {
                     <Item>
                       <Item.Image size='small' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hawaii_Warriors_logo.svg/1200px-Hawaii_Warriors_logo.svg.png'/>
                     </Item>
-                    <Header as='h1' inverted>"Grub-n-Go LOGO"</Header>
+                    <Header as='h1' inverted>Grub-n-Go</Header>
                   </Item.Group>
                 </Grid.Column>
 
