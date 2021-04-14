@@ -22,11 +22,11 @@ class NavBar extends React.Component {
           ) : ''}
           {/* eslint-disable-next-line max-len */}
           <Menu.Item as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '24px' }}>Venues</span></Menu.Item>
+            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Venues</span></Menu.Item>
           <Menu.Item as={NavLink} id="todaysMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '24px' }}>Todays Menu</span></Menu.Item>
+            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Todays Menu</span></Menu.Item>
           <Menu.Item as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '24px' }}>Top Picks</span></Menu.Item>
+            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Top Picks</span></Menu.Item>
           <Menu.Item>
             <span className='nav-bar-bowfolio-green' style={{ fontWeight: 1000, fontSize: '14px' }}>
               <Input icon='search' placeholder='Search...' />
@@ -41,7 +41,7 @@ class NavBar extends React.Component {
           ) : ''}
           <Menu.Item>
             {this.props.currentUser === '' ? (
-              <span className='grub-n-go-orange' style={{ fontWeight: 800, fontSize: '20px' }}>
+              <span className='grub-n-go-orange' style={{ fontWeight: 800, fontSize: '16px' }}>
                 <Dropdown id="login-dropdown" text="Login" icon={'user'}>
                   <Dropdown.Menu>
                     <Dropdown.Item id="login-dropdown-sign-in" icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
