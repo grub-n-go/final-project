@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
-import { Menu, Dropdown, Image, Input } from 'semantic-ui-react';
+import { Menu, Dropdown, Input } from 'semantic-ui-react';
 
 import { Roles } from 'meteor/alanning:roles';
 
@@ -21,12 +21,12 @@ class NavBar extends React.Component {
             <Menu.Item as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home" key='home'>Home</Menu.Item>
           ) : ''}
           {/* eslint-disable-next-line max-len */}
-          <Menu.Item as={NavLink} id="profilesMenuItem" activeClassName="active" exact to="/profiles" key='profiles'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 1000, fontSize: '28px' }}>Venues</span></Menu.Item>
-          <Menu.Item as={NavLink} id="projectsMenuItem" activeClassName="active" exact to="/projects" key='projects'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 1000, fontSize: '28px' }}>Todays Menu</span></Menu.Item>
-          <Menu.Item as={NavLink} id="interestsMenuItem" activeClassName="active" exact to="/interests" key='interests'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 1000, fontSize: '28px' }}>Top Picks</span></Menu.Item>
+          <Menu.Item as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
+            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '24px' }}>Venues</span></Menu.Item>
+          <Menu.Item as={NavLink} id="todaysMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
+            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '24px' }}>Todays Menu</span></Menu.Item>
+          <Menu.Item as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
+            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '24px' }}>Top Picks</span></Menu.Item>
           <Menu.Item>
             <span className='nav-bar-bowfolio-green' style={{ fontWeight: 1000, fontSize: '14px' }}>
               <Input icon='search' placeholder='Search...' />
