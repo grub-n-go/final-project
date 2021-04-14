@@ -10,19 +10,32 @@
   font-family: 'Tangerine', cursive;
 }
 
-.landing-green-background {
-  background-color: #376551;
-  color: white;
-  padding-top: 20px;
-}
-
 .landing-white-background {
   background-color: white;
   color: #376551;
-  padding-top: 20px;
+  margin: 0;
 }
 
 .reset-margins {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.welcome-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("images/landingBackground.jpeg");
+  background-attachment: fixed;
+}
+
+.green-gradient {
+  background: linear-gradient(to bottom, transparent, #376551);
+}
+
+.footer-background {
+  background: #376551;
+  padding: 0;
+  color: white;
+}
+
