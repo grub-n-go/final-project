@@ -1,12 +1,13 @@
 /* Custom site-wide CSS */
 
 .bowfolio-green {
-  color:  #376551;
+  color:  #FF0000;
+  font-family: 'Londrina Solid', cursive;
 }
 
 .nav-bar-bowfolio-green {
-  color:  #376551;
-  font-family: 'Londrina Solid', cursive;
+  color:  #FF0000;
+  font-family: cursive, 'Londrina Solid';
 }
 
 .landing-green-background {

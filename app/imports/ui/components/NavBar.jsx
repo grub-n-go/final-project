@@ -15,8 +15,7 @@ class NavBar extends React.Component {
       <div className='landing-green-background'>
         <Menu style={menuStyle} attached="top" borderless fluid widths={6} >
           <Menu.Item as={NavLink} activeClassName="" exact to="/">
-            <Image size='mini' src="/images/logo.png"/>
-            <span className='bowfolio-green' style={{ fontWeight: 800, fontSize: '24px' }}>Bowfolios</span>
+            <span className='bowfolio-green' style={{ fontWeight: 800, fontSize: '48px' }}>Grub-n-Go</span>
           </Menu.Item>
           {this.props.currentUser ? (
             <Menu.Item as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home" key='home'>Home</Menu.Item>
