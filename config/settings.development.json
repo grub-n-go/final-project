@@ -1,4 +1,47 @@
 {
+  "defaultUsers": [
+    {
+      "firstName": "Kristine",
+      "lastName": "Rivera",
+      "title": "Student",
+      "picture": "https://avatars.githubusercontent.com/u/40307136?s=400&u=07904de5cdaa00d375494a5d11535f2e1bb5e1c5&v=4",
+      "email": "kdrivera@hawaii.edu",
+      "preferences": [
+        "Dessert",
+        "Healthy"
+      ],
+      "favorites": [
+        "The Original"
+      ]
+    }
+
+  ],
+  "defaultVendors": [
+
+    {
+      "name": "Banan",
+      "picture": "https://www.flaticon.com/svg/vstatic/svg/2517/2517989.svg?token=exp=1618409046~hmac=add6f90ada0d3350a2d8d7c6b81edcbe",
+      "site": "https://banan.co/",
+      "categories": [
+        "Dessert",
+        "Healthy"
+      ],
+      "products": [
+        "The Original"
+      ]
+    }
+
+  ],
+
+  "foods": [
+    {
+      "name": "The Original",
+      "owner": "Banan",
+      "picture": "https://www.flaticon.com/svg/vstatic/svg/2995/2995918.svg?token=exp=1618409164~hmac=0ac5c18e618f7ee4b6a4b8af9c15de5a",
+      "price": "$7.00"
+    }
+  ],
+
   "defaultProfiles": [
     {
       "firstName": "Philip",
