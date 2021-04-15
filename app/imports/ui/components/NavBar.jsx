@@ -12,12 +12,16 @@ class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '0px' };
     return (
-      <Container>
-        <Menu style={menuStyle} attached="top" borderless>
+      <Menu style={menuStyle} attached="top" borderless fluid widths={6} >
+        <Menu.Item as={NavLink} activeClassName="" exact to="/">
+          <span className='bowfolio-red' style={{ fontWeight: 800, fontSize: '30px' }}>Grub-n-Go</span>
+        </Menu.Item>
+        <Container>
+          {/* <Menu style={menuStyle} attached="top" borderless>
           <Menu.Item position='left' as={NavLink} activeClassName="" exact to="/">
             <span className='bowfolio-red'>Grub-n-Go</span>
           </Menu.Item>
-
+          */}
           {this.props.currentUser ? (
             <Menu.Item position='left' as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home"
               key='home'><span className='nav-bar-bowfolio-red'>Home</span></Menu.Item>
@@ -73,9 +77,8 @@ class NavBar extends React.Component {
               </Dropdown>
             )}
           </Menu.Item>
-        </Menu>
-      </Container>
-
+        </Container>
+      </Menu>
     );
   }
 }
