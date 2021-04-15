@@ -60,11 +60,15 @@ class ProfilesPage extends React.Component {
     const emails = _.pluck(Profiles.collection.find().fetch(), 'email');
     const profileData = emails.map(email => getProfileData(email));
     return (
-      <Container id="profiles-page">
-        <Card.Group>
-          {_.map(profileData, (profile, index) => <MakeCard key={index} profile={profile}/>)}
-        </Card.Group>
-      </Container>
+      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+        <Container id="profiles-page">
+          <Card.Group>
+            {_.map(profileData, (profile, index) => <MakeCard key={index} profile={profile}/>)}
+          </Card.Group>
+        </Container>
+        <div className='green-gradient' style={{ paddingTop: '100px' }}/>
+        <div className='footer-background'/>
+      </div>
     );
   }
 }

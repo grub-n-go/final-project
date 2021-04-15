@@ -58,11 +58,15 @@ class ProjectsPage extends React.Component {
     const projects = _.pluck(Projects.collection.find().fetch(), 'name');
     const projectData = projects.map(project => getProjectData(project));
     return (
-      <Container id="projects-page">
-        <Card.Group>
-          {_.map(projectData, (project, index) => <MakeCard key={index} project={project}/>)}
-        </Card.Group>
-      </Container>
+      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+        <Container id="projects-page">
+          <Card.Group>
+            {_.map(projectData, (project, index) => <MakeCard key={index} project={project}/>)}
+          </Card.Group>
+        </Container>
+        <div className='green-gradient' style={{ paddingTop: '100px' }}/>
+        <div className='footer-background'/>
+      </div>
     );
   }
 }
