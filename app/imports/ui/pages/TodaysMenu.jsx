@@ -28,6 +28,9 @@ const MakeCard = (props) => (
         <span className='date'>{props.project.title}</span>
       </Card.Meta>
       <Card.Description>
+        <h1>
+          <p align="center" strong>Menu</p>
+        </h1>
         {props.project.description}
       </Card.Description>
     </Card.Content>
@@ -60,7 +63,7 @@ class ProjectsPage extends React.Component {
     return (
       <div className='welcome-background' style={{ paddingTop: '20px' }}>
         <Container id="projects-page">
-          <Card.Group>
+          <Card.Group centered itemsPerRow={1}>
             {_.map(projectData, (project, index) => <MakeCard key={index} project={project}/>)}
           </Card.Group>
         </Container>

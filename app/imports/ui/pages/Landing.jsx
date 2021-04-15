@@ -25,14 +25,11 @@ class Landing extends React.Component {
             </Grid.Column>
           </Grid>
         </div>
-
         <div className='green-gradient'>
           <Container style={{ paddingTop: '200px' }}>
           </Container>
         </div>
-
       </div>
-
     );
   }
 }

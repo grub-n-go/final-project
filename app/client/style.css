@@ -10,6 +10,7 @@
   font-family: 'Londrina Solid', cursive;
   font-weight: 800;
   font-size: 30px;
+  padding-bottom: 5px;
 }
 
 .grub-n-go-orange{
@@ -22,6 +23,8 @@
   font-family: cursive, 'Tangerine';
   font-weight: 800;
   font-size: 18px;
+  font-family: cursive, 'Tangerine' ;
+  margin-bottom: 5px;
 }
 
 .landing-white-background {

@@ -33,7 +33,7 @@ class Footer extends React.Component {
                     <Form.Field>
                       <input placeholder='Let us know'/>
                     </Form.Field>
-                    <Button color='blue' type='Subscribe'>Email</Button>
+                    <Button color='blue' type='Subscribe'>Submit</Button>
                   </Form>
                 </Grid.Column>
 
