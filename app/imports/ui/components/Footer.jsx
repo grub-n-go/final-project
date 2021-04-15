@@ -42,8 +42,6 @@ class Footer extends React.Component {
                     <Item>
                       {/* eslint-disable-next-line max-len */}
                       <Item.Image size='small' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hawaii_Warriors_logo.svg/1200px-Hawaii_Warriors_logo.svg.png'/>
-                      <Item.Image size='small'
-                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hawaii_Warriors_logo.svg/1200px-Hawaii_Warriors_logo.svg.png'/>
                     </Item>
                     <Header as='h1' inverted>Grub-n-Go</Header>
                   </Item.Group>
