@@ -65,7 +65,7 @@ class UserProfile extends React.Component {
     const projectData = projects.map(project => getProjectData(project));
     return (
       <div>
-        <Container>
+        <Container className='landing-white-background'>
           <Grid id="UserProfile-page" container centered>
             <Grid.Column width={12}>
               <Header as="h2">{profile.firstName} {profile.lastName}</Header>
@@ -94,22 +94,27 @@ class UserProfile extends React.Component {
                   </Item>
 
                 </Item.Group>
+              </Grid.Column>
+
+              <Grid.Column width={12}>
                 <Label attached='bottom right'>
                   <Icon name='setting' />
                   <Link as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home" key='home'>Edit Profile</Link>
                 </Label>
-
               </Grid.Column>
+
             </Grid.Row>
+
           </Grid>
         </Container>
 
-        <Container centered>
+        <Container centered className='landing-white-background'>
           <Header as="h2" textAlign='center'>Favorites</Header>
-          <Card.Group>
+          <Card.Group centered>
             {_.map(projectData, (project, index) => <MakeCard key={index} project={project}/>)}
           </Card.Group>
         </Container>
+
       </div>
     );
   }
