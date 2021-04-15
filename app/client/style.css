@@ -3,6 +3,7 @@
 .bowfolio-green {
   color:  #FF0000;
   font-family: 'Londrina Solid', cursive;
+  padding-bottom: 10px;
 }
 
 .grub-n-go-orange{
@@ -13,6 +14,7 @@
 .nav-bar-bowfolio-green {
   color:  #FF0000;
   font-family: cursive, 'Tangerine' ;
+  margin-bottom: 10px;
 }
 
 .landing-white-background {
