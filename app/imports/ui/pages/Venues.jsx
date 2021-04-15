@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Loader, Card, Image, Label, Header } from 'semantic-ui-react';
+import { Container, Loader, Card, Image, Label } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -21,9 +21,9 @@ function getProfileData(email) {
 
 /** Component for layout out a Profile Card. */
 const MakeCard = (props) => (
-  <Card>
+  <Card fluid >
     <Card.Content>
-      <Image floated='right' size='mini' src={props.profile.picture} />
+      <Image size='huge' src={props.profile.picture} />
       <Card.Header>{props.profile.firstName} {props.profile.lastName}</Card.Header>
       <Card.Meta>
         <span className='date'>{props.profile.title}</span>
@@ -35,10 +35,6 @@ const MakeCard = (props) => (
     <Card.Content extra>
       {_.map(props.profile.interests,
         (interest, index) => <Label key={index} size='tiny' color='teal'>{interest}</Label>)}
-    </Card.Content>
-    <Card.Content extra>
-      <Header as='h5'>Projects</Header>
-      {_.map(props.profile.projects, (project, index) => <Image key={index} size='mini' src={project}/>)}
     </Card.Content>
   </Card>
 );
@@ -62,7 +58,7 @@ class ProfilesPage extends React.Component {
     return (
       <div className='welcome-background' style={{ paddingTop: '20px' }}>
         <Container id="profiles-page">
-          <Card.Group>
+          <Card.Group centered itemsPerRow={2}>
             {_.map(profileData, (profile, index) => <MakeCard key={index} profile={profile}/>)}
           </Card.Group>
         </Container>
