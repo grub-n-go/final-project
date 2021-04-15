@@ -64,12 +64,10 @@ class UserProfile extends React.Component {
     const profile = Profiles.collection.findOne({ email });
     const projectData = projects.map(project => getProjectData(project));
     return (
-      <div>
+      <div className='welcome-background' style={{ paddingTop: '50px' }}>
+        <Header as="h2" inverted style={{ fontSize: '100px', textAlign: 'center' }}>{profile.firstName}&nbsp;{profile.lastName}</Header>
         <Container className='landing-white-background'>
-          <Grid id="UserProfile-page" container centered>
-            <Grid.Column width={13}>
-              <Header as="h2">{profile.firstName}&nbsp;{profile.lastName}</Header>
-            </Grid.Column>
+          <Grid id="UserProfile-page" container centered style={{ paddingTop: '20px' }}>
 
             <Grid.Row>
               <Grid.Column width={3}>
@@ -78,6 +76,12 @@ class UserProfile extends React.Component {
               <Grid.Column width={9}>
 
                 <Item.Group relaxed>
+
+                  <Item>
+                    <Item.Header as='h5'>Email:</Item.Header>
+                    <Item.Content verticalAlign='middle'>&nbsp;{profile.email}</Item.Content>
+                  </Item>
+
                   <Item>
                     <Item.Header as='h5'>Title:</Item.Header>
                     <Item.Content verticalAlign='middle'>&nbsp;{profile.title}</Item.Content>
@@ -109,12 +113,17 @@ class UserProfile extends React.Component {
           </Grid>
         </Container>
 
-        <Container centered className='landing-white-background'>
+        <Container centered className='landing-white-background' style={{ padding: '50px' }}>
           <Header as="h2" textAlign='center'>Favorites</Header>
           <Card.Group centered>
             {_.map(projectData, (project, index) => <MakeCard key={index} project={project}/>)}
           </Card.Group>
         </Container>
+
+        <div className='green-gradient'>
+          <Container style={{ paddingTop: '200px' }}>
+          </Container>
+        </div>
 
       </div>
     );

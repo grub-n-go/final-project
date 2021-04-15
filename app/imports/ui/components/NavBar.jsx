@@ -23,6 +23,11 @@ class NavBar extends React.Component {
               key='home'><span className='nav-bar-bowfolio-red'>Home</span></Menu.Item>
           ) : ''}
 
+          {this.props.currentUser ? (
+            <Menu.Item position='left' as={NavLink} id="userprofileMenuItem" activeClassName="active" exact to="/userprofile"
+              key='userprofile'><span className='nav-bar-bowfolio-red'>User Profile</span></Menu.Item>
+          ) : ''}
+
           <Menu.Item position='left' as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
             <span className='nav-bar-bowfolio-red'>Venues</span>
           </Menu.Item>
