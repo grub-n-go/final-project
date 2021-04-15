@@ -1,23 +1,5 @@
 {
-  "defaultUsers": [
-    {
-      "firstName": "Kristine",
-      "lastName": "Rivera",
-      "title": "Student",
-      "picture": "https://avatars.githubusercontent.com/u/40307136?s=400&u=07904de5cdaa00d375494a5d11535f2e1bb5e1c5&v=4",
-      "email": "kdrivera@hawaii.edu",
-      "preferences": [
-        "Dessert",
-        "Healthy"
-      ],
-      "favorites": [
-        "The Original"
-      ]
-    }
-
-  ],
   "defaultVendors": [
-
     {
       "name": "Banan",
       "picture": "https://www.flaticon.com/svg/vstatic/svg/2517/2517989.svg?token=exp=1618409046~hmac=add6f90ada0d3350a2d8d7c6b81edcbe",
@@ -30,7 +12,6 @@
         "The Original"
       ]
     }
-
   ],
 
   "foods": [
@@ -48,6 +29,8 @@
       "lastName": "Johnson",
       "bio": "I am a Professor and like to paddle outrigger canoes.",
       "title": "Professor",
+      "picture": "https://philipmjohnson.github.io/images/philip2.jpeg",
+      "email": "johnson@hawaii.edu",
       "interests": [
         "Software Engineering",
         "Climate Change"
@@ -56,8 +39,13 @@
         "RadGrad",
         "Open Power Quality"
       ],
-      "picture": "https://philipmjohnson.github.io/images/philip2.jpeg",
-      "email": "johnson@hawaii.edu"
+      "preferences": [
+        "Dessert",
+        "Healthy"
+      ],
+      "favorites": [
+        "The Original"
+      ]
     },
     {
       "firstName": "Henri",
