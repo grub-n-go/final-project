@@ -1,18 +1,27 @@
 /* Custom site-wide CSS */
 
-.bowfolio-green {
+.ui.borderless.top.attached.menu{
+  box-shadow: none;
+  border: none;
+}
+
+.bowfolio-red {
   color:  #FF0000;
   font-family: 'Londrina Solid', cursive;
+  font-weight: 800;
+  font-size: 30px;
 }
 
 .grub-n-go-orange{
-  color:  #FF0000;
+  color: #ff0000;
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.nav-bar-bowfolio-green {
+.nav-bar-bowfolio-red {
   color:  #FF0000;
-  font-family: cursive, 'Tangerine' ;
+  font-family: cursive, 'Tangerine';
+  font-weight: 800;
+  font-size: 18px;
 }
 
 .landing-white-background {
