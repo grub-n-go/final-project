@@ -67,7 +67,7 @@ class UserProfile extends React.Component {
       <div>
         <Container className='landing-white-background'>
           <Grid id="UserProfile-page" container centered>
-            <Grid.Column width={12}>
+            <Grid.Column width={13}>
               <Header as="h2">{profile.firstName} {profile.lastName}</Header>
             </Grid.Column>
 
@@ -90,13 +90,15 @@ class UserProfile extends React.Component {
 
                   <Item>
                     <Item.Header as='h5'>Preferences:</Item.Header>
-                    <Item.Content verticalAlign='middle'>&nbsp;{interests}</Item.Content>
+                    <Item.Content verticalAlign='middle'>{_.map(interests,
+                      (interest, index) => <Label style={{ margin: '5px' }} key={index} size='large' color='teal'>{interest}</Label>)}</Item.Content>
                   </Item>
 
                 </Item.Group>
               </Grid.Column>
 
-              <Grid.Column width={12}>
+
+              <Grid.Column width={1}>
                 <Label attached='bottom right'>
                   <Icon name='setting' />
                   <Link as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home" key='home'>Edit</Link>

@@ -4,7 +4,7 @@
       "name": "Banan",
       "picture": "https://www.flaticon.com/svg/vstatic/svg/2517/2517989.svg?token=exp=1618409046~hmac=add6f90ada0d3350a2d8d7c6b81edcbe",
       "site": "https://banan.co/",
-      "categories": [
+      "interests": [
         "Dessert",
         "Healthy"
       ],
@@ -32,19 +32,12 @@
       "picture": "https://philipmjohnson.github.io/images/philip2.jpeg",
       "email": "johnson@hawaii.edu",
       "interests": [
-        "Software Engineering",
-        "Climate Change"
+        "Healthy",
+        "Burgers"
       ],
       "projects":[
         "RadGrad",
         "Open Power Quality"
-      ],
-      "preferences": [
-        "Dessert",
-        "Healthy"
-      ],
-      "favorites": [
-        "The Original"
       ]
     },
     {
@@ -53,8 +46,8 @@
       "bio": "In my spare time, I like to scuba dive.",
       "title": "Professor",
       "interests": [
-        "HPC",
-        "Distributed Computing"
+        "Italian",
+        "Dessert"
       ],
       "projects":[
         "WRENCH"
@@ -68,8 +61,8 @@
       "bio": "Every summer, I enjoy visiting Portland, Oregon.",
       "title": "Assistant Professor",
       "interests": [
-        "Software Engineering",
-        "Renewable Energy"
+        "Burgers",
+        "Dessert"
       ],
       "projects":[
         "RadGrad"
@@ -83,8 +76,8 @@
       "bio": "I enjoy competitive bicycle racing.",
       "title": "Ph.D. (2020))",
       "interests": [
-        "AI",
-        "Distributed Computing"
+        "Japanese",
+        "Korean"
       ],
       "projects":[
         "Open Power Quality"
@@ -98,7 +91,7 @@
       "bio": "I escaped from Chicago and moved to Hawaii in 2014.",
       "title": "Professor",
       "interests": [
-        "Visualization"
+        "Healthy"
       ],
       "projects":[
         "Cyber Canoe"
@@ -127,8 +120,8 @@
       "homepage": "https://openpowerquality.org",
       "description": "Open source hardware and software for distributed power quality data collection, analysis, and visualization.",
       "interests": [
-        "Software Engineering",
-        "Renewable Energy"
+        "Dessert",
+        "Japanese"
       ],
       "picture": "https://avatars0.githubusercontent.com/u/4641939"
     },
@@ -137,7 +130,7 @@
       "homepage": "https://radgrad.org",
       "description": "Growing awesome computer scientists, one graduate at a time.",
       "interests": [
-        "Educational Technology"
+        "Burgers"
       ],
       "picture": "https://www.radgrad.org/img/radgrad_logo.png"
     },
@@ -146,7 +139,7 @@
       "homepage": "https://wrench-project.org",
       "description": "WRENCH is an open-source library for developing simulators for large-scale scientific computation",
       "interests": [
-        "Distributed computing"
+        "Italian"
       ],
       "picture": "https://wrench-project.org/images/logo-vertical.png"
     },
@@ -155,8 +148,8 @@
       "homepage": "http://lava.manoa.hawaii.edu/blog/2014/07/11/cyber-canoe-cyber-infrastructure-enabled-collaborative-analysis-navigation-and-observation-environment/",
       "description": "Software for Unity projects involving stereoscopic resolution driven by 9 PCs with a GeForce 980 graphics card.",
       "interests": [
-        "Unity",
-        "Visualization"
+        "Italian",
+        "Japanese"
       ],
       "picture": "https://www.hawaii.edu/its/wp-content/uploads/sites/2/2019/01/LAVAlogo-300x192-300x192.png"
     }
