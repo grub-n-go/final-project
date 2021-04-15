@@ -99,7 +99,7 @@ class UserProfile extends React.Component {
               <Grid.Column width={12}>
                 <Label attached='bottom right'>
                   <Icon name='setting' />
-                  <Link as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home" key='home'>Edit Profile</Link>
+                  <Link as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home" key='home'>Edit</Link>
                 </Label>
               </Grid.Column>
 
