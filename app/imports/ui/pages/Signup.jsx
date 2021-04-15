@@ -20,7 +20,7 @@ class Signup extends React.Component {
     this.setState({ [name]: value });
   }
 
-  /** Handle Signup submission. Create user account and a profile entry, then redirect to the home page. */
+  /** Handle Signup submission. Create user account and a profile entry, then redirect to the AddUser page. */
   submit= () => {
     const { email, password } = this.state;
     Accounts.createUser({ email, username: email, password }, (err) => {
@@ -40,11 +40,12 @@ class Signup extends React.Component {
 
   /** Display the signup form. */
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/home' } };
-    // if correct authentication, redirect to from: page instead of signup screen
+    const { from } = this.props.location.state || { from: { pathname: '/adduser' } };
+    // if correct authentication, redirect to page instead of login screen
     if (this.state.redirectToReferer) {
       return <Redirect to={from}/>;
     }
+
     return (
       <Container id="signup-page">
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>

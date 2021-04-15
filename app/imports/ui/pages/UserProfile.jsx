@@ -68,7 +68,7 @@ class UserProfile extends React.Component {
         <Container className='landing-white-background'>
           <Grid id="UserProfile-page" container centered>
             <Grid.Column width={13}>
-              <Header as="h2">{profile.firstName} {profile.lastName}</Header>
+              <Header as="h2">{profile.firstName}&nbsp;{profile.lastName}</Header>
             </Grid.Column>
 
             <Grid.Row>
@@ -96,7 +96,6 @@ class UserProfile extends React.Component {
 
                 </Item.Group>
               </Grid.Column>
-
 
               <Grid.Column width={1}>
                 <Label attached='bottom right'>
