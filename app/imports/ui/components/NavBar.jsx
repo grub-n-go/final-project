@@ -12,48 +12,21 @@ class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '0px' };
     return (
-<<<<<<< HEAD
-      <Menu style={menuStyle} attached="top" borderless fluid widths={6} >
-        <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <span className='bowfolio-red' style={{ fontWeight: 800, fontSize: '30px' }}>Grub-n-Go</span>
+      <Menu style={menuStyle} attached="top" borderless>
+        <Menu.Item position='left' as={NavLink} activeClassName="" exact to="/">
+          <span className='bowfolio-red'>Grub-n-Go</span>
         </Menu.Item>
         <Container>
-          {/* <Menu style={menuStyle} attached="top" borderless>
-          <Menu.Item position='left' as={NavLink} activeClassName="" exact to="/">
-            <span className='bowfolio-red'>Grub-n-Go</span>
-=======
-      <div className='landing-green-background'>
-        <Menu style={menuStyle} attached="top" borderless fluid widths={6} >
-          <Menu.Item as={NavLink} activeClassName="" exact to="/">
-            <span className='bowfolio-green' style={{ fontWeight: 800, fontSize: '30px' }}>Grub-n-Go</span>
->>>>>>> landing-mockup
-          </Menu.Item>
-          */}
           {this.props.currentUser ? (
             <Menu.Item position='left' as={NavLink} id="homeMenuItem" activeClassName="active" exact to="/home"
               key='home'><span className='nav-bar-bowfolio-red'>Home</span></Menu.Item>
-          ) : ''}
-<<<<<<< HEAD
-
+          ) : '' }
           <Menu.Item position='left' as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
             <span className='nav-bar-bowfolio-red'>Venues</span>
           </Menu.Item>
 
           <Menu.Item position='left' as={NavLink} id="todaysMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
             <span className='nav-bar-bowfolio-red'>Today&apos;s Menu</span>
-=======
-          {/* eslint-disable-next-line max-len */}
-          <Menu.Item as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '18px' }}>Venues</span></Menu.Item>
-          <Menu.Item as={NavLink} id="todaysMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '18px' }}>Todays Menu</span></Menu.Item>
-          <Menu.Item as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 800, fontSize: '18px' }}>Top Picks</span></Menu.Item>
-          <Menu.Item>
-            <span className='nav-bar-bowfolio-green' style={{ fontWeight: 1000, fontSize: '14px' }}>
-              <Input icon='search' placeholder='Search...' />
-            </span>
->>>>>>> landing-mockup
           </Menu.Item>
 
           <Menu.Item position='left' as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
