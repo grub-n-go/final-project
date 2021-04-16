@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Header, Item } from 'semantic-ui-react';
+import { Grid, Container, Header, Item, Card } from 'semantic-ui-react';
 
 /** Renders a color-blocked static landing page. */
 class Landing extends React.Component {
@@ -7,8 +7,16 @@ class Landing extends React.Component {
     return (
       <div className='welcome-background'>
         <div>
-          <Container textAlign='center' style={{ paddingTop: '300px' }}>
+          <Container textAlign='center' style={{ paddingTop: '200px' }}>
             <Header as='h1' inverted style={{ fontSize: '250px' }}>ALOHA!</Header>
+            <Container text style={{ paddingBottom: '100px' }}>
+              <Card.Group centered>
+                <Card fluid className='grub-n-go-orange'>
+                  <Header as='h3' style={{ fontSize: '20px', color: '#ff0000' }}>
+                    Grub-n-Go is your one stop site for all things food around the university of Hawaii at Manoa Campus</Header>
+                </Card>
+              </Card.Group>
+            </Container>
           </Container>
         </div>
         <div className='landing-white-background'>
