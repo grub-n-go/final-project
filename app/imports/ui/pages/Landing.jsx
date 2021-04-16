@@ -9,6 +9,9 @@ class Landing extends React.Component {
         <div>
           <Container textAlign='center' style={{ paddingTop: '300px' }}>
             <Header as='h1' inverted style={{ fontSize: '250px' }}>ALOHA!</Header>
+            <Header as='h2' inverted style={{ fontsize: '75px' }} >
+              Grub-n-Go is your one stop site for all things food at the University of Hawaiʻi at Manoa campus
+            </Header>
           </Container>
         </div>
         <div className='landing-white-background'>
