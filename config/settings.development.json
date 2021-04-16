@@ -10,6 +10,7 @@
       "lastName": "Johnson",
       "bio": "I am a Professor and like to paddle outrigger canoes.",
       "title": "Professor",
+      "role": "admin",
       "interests": [
         "Software Engineering",
         "Climate Change"

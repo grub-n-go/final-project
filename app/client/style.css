@@ -14,7 +14,13 @@
 
 .grub-n-go-orange{
   color: #ff0000;
-  font-family: 'Nunito Sans', sans-serif;
+}
+
+.adminLinks {
+  color: #376551;
+  font-family: cursive, 'Tangerine';
+  font-weight: 800;
+  font-size: 16px;
 }
 
 .nav-bar-bowfolio-red {
