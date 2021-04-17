@@ -8,7 +8,7 @@ module.exports = {
   },
 
   app: {
-    name: 'meteor-application-template-react',
+    name: 'grub-n-go',
     path: '../',
 
     servers: {
