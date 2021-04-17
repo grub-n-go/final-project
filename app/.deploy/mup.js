@@ -1,9 +1,9 @@
 module.exports = {
   servers: {
     one: {
-      host: '104.236.199.85',
+      host: '143.110.230.194',
       username: 'root',
-      password: 'grub-n-go'
+      password: 'thisIsThePassw0rd'
     }
   },
 
@@ -20,8 +20,8 @@ module.exports = {
     },
 
     env: {
-      ROOT_URL: 'http://104.236.199.85',
-      MONGO_URL: 'mongodb://mongodb/meteor',
+      ROOT_URL: 'http://143.110.230.194',
+      MONGO_URL: 'mongodb://mongodb/grub-n-go',
       MONGO_OPLOG_URL: 'mongodb://mongodb/local',
     },
 
