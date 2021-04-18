@@ -8,15 +8,17 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import Home from '../pages/Home';
-import Profiles from '../pages/Profiles';
+import Venues from '../pages/Venues';
 import AddProject from '../pages/AddProject';
-import Projects from '../pages/Projects';
+import TodaysMenu from '../pages/TodaysMenu';
 import Filter from '../pages/Filter';
-import Interests from '../pages/Interests';
+import TodaysPicks from '../pages/TodaysPicks';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
+import UserProfile from '../pages/UserProfile';
+import AddUser from '../pages/AddUser';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -25,13 +27,15 @@ class App extends React.Component {
       <Router>
         <div className='gradient-background'>
           <NavBar/>
-          <div style={{ paddingTop: '20px', paddingBottom: '30px' }}>
+          <div>
             <Switch>
               <Route exact path="/" component={Landing}/>
               <ProtectedRoute path="/home" component={Home}/>
-              <Route path="/profiles" component={Profiles}/>
-              <Route path="/projects" component={Projects}/>
-              <Route path="/interests" component={Interests}/>
+              <ProtectedRoute path="/userprofile" component={UserProfile}/>
+              <Route path="/adduser" component={AddUser}/>
+              <Route path="/venues" component={Venues}/>
+              <Route path="/todaysMenu" component={TodaysMenu}/>
+              <Route path="/topPicks" component={TodaysPicks}/>
               <ProtectedRoute path="/addproject" component={AddProject}/>
               <ProtectedRoute path="/filter" component={Filter}/>
               <Route path="/signin" component={Signin}/>

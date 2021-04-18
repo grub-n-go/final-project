@@ -1,5 +1,6 @@
 /* Custom site-wide CSS */
 
+<<<<<<< HEAD
 .bowfolio-green {
   color:  #FF0000;
   font-family: 'Londrina Solid', cursive;
@@ -7,21 +8,62 @@
 
 .gradient-background {
   background: linear-gradient(to bottom, rgba(255, 247, 223, 1), rgba(255, 178, 134, 1)) no-repeat center center fixed !important;
+=======
+.ui.borderless.top.attached.menu{
+  box-shadow: none;
+  border: none;
+>>>>>>> master
 }
 
-.landing-green-background {
-  background-color: #376551;
-  color: white;
-  padding-top: 20px;
+.bowfolio-red {
+  color:  #FF0000;
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.grub-n-go-orange{
+  color: #ff0000;
+}
+
+.adminLinks {
+  color: #376551;
+  font-family: cursive, 'Tangerine';
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.nav-bar-bowfolio-red {
+  color:  #FF0000;
+  font-family: cursive, 'Tangerine';
+  font-weight: 800;
+  font-size: 16px;
 }
 
 .landing-white-background {
   background-color: white;
   color: #376551;
-  padding-top: 20px;
+  margin: 0;
 }
 
 .reset-margins {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.welcome-background {
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(https://www.hawaiipokefob.com/img/slider3.jpg);
+}
+
+.green-gradient {
+  background: linear-gradient(to bottom, transparent, #376551);
+}
+
+.footer-background {
+  background: #376551;
+  padding: 0;
+  color: white;
+}
+

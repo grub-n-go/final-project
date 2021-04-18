@@ -1,55 +1,42 @@
 import React from 'react';
-import { Grid, Image, Container, Header } from 'semantic-ui-react';
+import { Grid, Container, Header, Item, Card } from 'semantic-ui-react';
 
 /** Renders a color-blocked static landing page. */
 class Landing extends React.Component {
   render() {
     return (
-      <div id="landing-page">
-        <div className='landing-green-background'>
-          <Container textAlign='center'>
-            <Header style={{ paddingTop: '20px', color: 'white', fontSize: '36pt' }} as='h1'>
-                Welcome to Bowfolios
-            </Header>
-            <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
-                Profiles, projects, and interest areas for the UH Community
-            </Header>
+      <div className='welcome-background'>
+        <div>
+          <Container textAlign='center' style={{ paddingTop: '200px' }}>
+            <Header as='h1' inverted style={{ fontSize: '250px' }}>ALOHA!</Header>
+            <Container text style={{ paddingBottom: '100px' }}>
+              <Card.Group centered>
+                <Card fluid className='grub-n-go-orange'>
+                  <Header as='h3' style={{ fontSize: '20px', color: '#ff0000' }}>
+                    Grub-n-Go is your one stop site for all things food around the university of Hawaii at Manoa Campus</Header>
+                </Card>
+              </Card.Group>
+            </Container>
           </Container>
         </div>
         <div className='landing-white-background'>
-          <Header style={{ color: '#376551' }} as='h2' textAlign='center'>Start by making your profile....</Header>
+          <Header style={{ color: '#376551' }} as='h1' textAlign='center'>TODAY&apos;S SPECIAL</Header>
           <Grid container stackable columns='equal' textAlign='center'>
             <Grid.Column>
-              <Image src="/images/home-page.png"/>
+              <Item.Image size='medium'
+                src="https://thesurfingpighawaii.com/wp-content/uploads/2018/04/449d5a_57f413dec56944eabdb7b35c6497df23mv2_d_3669_3669_s_4_2.jpg"/>
             </Grid.Column>
             <Grid.Column>
-              <Image src="/images/profiles-page.png"/>
+
+              <Item.Image size='medium' src="/images/bana.png"/>
+
             </Grid.Column>
           </Grid>
         </div>
-        <div className='landing-green-background'>
-          <Header style={{ color: 'white' }} as='h2' textAlign='center'>...then add your projects</Header>
-          <Grid container stackable columns='equal' textAlign='center'>
-            <Grid.Column>
-              <Image src="/images/add-project-page.png"/>
-            </Grid.Column>
-            <Grid.Column>
-              <Image src="/images/projects-page.png"/>
-            </Grid.Column>
-          </Grid>
-        </div>
-        <div className='landing-white-background'>
-          <Header style={{ color: '#376551' }} as='h2' textAlign='center'>
-              Connect to people and projects with shared interests!
-          </Header>
-          <Grid container stackable columns='equal' textAlign='center'>
-            <Grid.Column>
-              <Image src="/images/interests-page.png"/>
-            </Grid.Column>
-            <Grid.Column>
-              <Image src="/images/filter-page.png"/>
-            </Grid.Column>
-          </Grid>
+
+        <div className='green-gradient'>
+          <Container style={{ paddingTop: '200px' }}>
+          </Container>
         </div>
 
       </div>
