@@ -1,7 +1,7 @@
 module.exports = {
   servers: {
     one: {
-      host: '104.236.199.85',
+      host: 'grubngo.xyz',
       username: 'root',
       password: 'grub-n-go'
     }
@@ -20,7 +20,7 @@ module.exports = {
     },
 
     env: {
-      ROOT_URL: 'http://104.236.199.85',
+      ROOT_URL: 'https://grubngo.xyz/',
       MONGO_URL: 'mongodb://mongodb/meteor',
       MONGO_OPLOG_URL: 'mongodb://mongodb/local',
     },
@@ -30,6 +30,14 @@ module.exports = {
     },
 
     enableUploadProgressBar: true
+  },
+
+  proxy: {
+    domains: 'grubngo.xyz',
+    ssl: {
+      letsEncryptEmail: 'vizcarra@hawaii.edu',
+      forceSSL: true
+    }
   },
 
   mongo: {
