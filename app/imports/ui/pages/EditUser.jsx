@@ -30,8 +30,8 @@ const makeSchema = (allInterests, allProjects) => new SimpleSchema({
   'projects.$': { type: String, allowedValues: allProjects },
 });
 
-/** Renders the AddUser Page: what appears after the user logs in. */
-class AddUser extends React.Component {
+/** Renders the EditUSer Page: what appears after the user logs in. */
+class EditUSer extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
@@ -39,7 +39,7 @@ class AddUser extends React.Component {
       if (error) {
         swal('Error', error.message, 'error');
       } else {
-        swal('Success', 'Profile added successfully', 'success');
+        swal('Success', 'Profile updated successfully', 'success');
       }
     });
   }
@@ -64,18 +64,15 @@ class AddUser extends React.Component {
     const model = _.extend({}, profile, { interests, projects });
     return (
       <div className='welcome-background' style={{ paddingTop: '20px' }}>
-        <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Welcome to Grub-n-Go</Header>
-        <Grid id="AddUser-page" container centered className='landing-white-background'>
+        <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Edit Your Profile</Header>
+        <Grid id="EditUSer-page" container centered>
           <Grid.Column>
             <AutoForm model={model} schema={bridge} onSubmit={data => this.submit(data)}>
-              <Header as="h2" textAlign="center" style={{ padding: '20px' }}>
-                Please enter your details to sign up and be part of our great community
-              </Header>
               <Segment>
                 <Form.Group widths={'equal'}>
                   <TextField id='firstName' name='firstName' showInlineError={true} placeholder={'First Name'}/>
                   <TextField id='lastName' name='lastName' showInlineError={true} placeholder={'Last Name'}/>
-                  <TextField name='email' showInlineError={true} placeholder={'email'}/>
+                  <TextField name='email' showInlineError={true} placeholder={'email'} disabled/>
                 </Form.Group>
                 <LongTextField id='bio' name='bio' placeholder='Write a little bit about yourself.'/>
                 <Form.Group widths={'equal'}>
@@ -86,7 +83,7 @@ class AddUser extends React.Component {
                   <MultiSelectField name='interests' showInlineError={true} placeholder={'Interests'}/>
                   <MultiSelectField name='projects' showInlineError={true} placeholder={'Projects'}/>
                 </Form.Group>
-                <SubmitField id='AddUser-page-submit' value='Update'/>
+                <SubmitField id='EditUSer-page-submit' value='Update'/>
               </Segment>
             </AutoForm>
           </Grid.Column>
@@ -102,7 +99,7 @@ class AddUser extends React.Component {
   }
 }
 
-AddUser.propTypes = {
+EditUSer.propTypes = {
   ready: PropTypes.bool.isRequired,
 };
 
@@ -117,4 +114,4 @@ export default withTracker(() => {
   return {
     ready: sub1.ready() && sub2.ready() && sub3.ready() && sub4.ready() && sub5.ready(),
   };
-})(AddUser);
+})(EditUSer);

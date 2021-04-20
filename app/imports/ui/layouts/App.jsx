@@ -7,7 +7,6 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import Home from '../pages/Home';
 import Venues from '../pages/Venues';
 import AddProject from '../pages/AddProject';
 import TodaysMenu from '../pages/TodaysMenu';
@@ -19,6 +18,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import UserProfile from '../pages/UserProfile';
 import AddUser from '../pages/AddUser';
+import EditUser from '../pages/EditUser';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -30,7 +30,7 @@ class App extends React.Component {
           <div>
             <Switch>
               <Route exact path="/" component={Landing}/>
-              <ProtectedRoute path="/home" component={Home}/>
+              <ProtectedRoute path="/edituser" component={EditUser}/>
               <ProtectedRoute path="/userprofile" component={UserProfile}/>
               <Route path="/adduser" component={AddUser}/>
               <Route path="/venues" component={Venues}/>
