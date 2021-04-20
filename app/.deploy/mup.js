@@ -8,7 +8,7 @@ module.exports = {
   },
 
   app: {
-    name: 'meteor-application-template-react',
+    name: 'grub-n-go',
     path: '../',
 
     servers: {
@@ -21,7 +21,7 @@ module.exports = {
 
     env: {
       ROOT_URL: 'https://grubngo.xyz/',
-      MONGO_URL: 'mongodb://mongodb/meteor',
+      MONGO_URL: 'mongodb://mongodb/grub-n-go',
       MONGO_OPLOG_URL: 'mongodb://mongodb/local',
     },
 

@@ -47,17 +47,33 @@ function addProject({ name, homepage, description, interests, picture }) {
   interests.map(interest => addInterest(interest));
 }
 
-/** Initialize DB if it appears to be empty (i.e. no users defined.) */
-if (Meteor.users.find().count() === 0) {
-  if (Meteor.settings.defaultProjects && Meteor.settings.defaultProfiles) {
-    console.log('Creating the default profiles');
+// /** Initialize DB if it appears to be empty (i.e. no users defined.) */
+// if (Meteor.users.find().count() === 0) {
+//   if (Meteor.settings.defaultProjects && Meteor.settings.defaultProfiles) {
+//     console.log('Creating the default profiles');
+//     Meteor.settings.defaultProfiles.map(profile => addProfile(profile));
+//     console.log('Creating the default projects');
+//     Meteor.settings.defaultProjects.map(project => addProject(project));
+//   } else {
+//     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');
+//   }
+// }
+
+// Initialize the ProfilesCollection if empty.
+if (Profiles.collection.find().count() === 0) {
+  if (Meteor.settings.defaultProfiles) {
+    console.log('Creating default Profiles.');
     Meteor.settings.defaultProfiles.map(profile => addProfile(profile));
-    console.log('Creating the default projects');
-    Meteor.settings.defaultProjects.map(project => addProject(project));
-  } else {
-    console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');
   }
 }
+// Initialize the ProjectsCollection if empty.
+if (Projects.collection.find().count() === 0) {
+  if (Meteor.settings.defaultProjects) {
+    console.log('Creating default Projects.');
+    Meteor.settings.defaultProjects.map(project => addProject(project));
+  }
+}
+
 
 /**
  * If the loadAssetsFile field in settings.development.json is true, then load the data in private/data.json.
