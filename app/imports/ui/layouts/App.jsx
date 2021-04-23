@@ -19,6 +19,7 @@ import Signout from '../pages/Signout';
 import UserProfile from '../pages/UserProfile';
 import AddUser from '../pages/AddUser';
 import EditUser from '../pages/EditUser';
+import Admin from '../pages/Admin';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,7 +33,7 @@ class App extends React.Component {
               <Route exact path="/" component={Landing}/>
               <ProtectedRoute path="/edituser" component={EditUser}/>
               <ProtectedRoute path="/userprofile" component={UserProfile}/>
-              <Route path="/adduser" component={AddUser}/>
+              <ProtectedRoute path="/adduser" component={AddUser}/>
               <Route path="/venues" component={Venues}/>
               <Route path="/todaysMenu" component={TodaysMenu}/>
               <Route path="/topPicks" component={TodaysPicks}/>
@@ -41,6 +42,7 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/signout" component={Signout}/>
+              <AdminProtectedRoute path="/admin" component={Admin}/>
               <Route component={NotFound}/>
             </Switch>
           </div>
