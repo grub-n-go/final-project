@@ -4,6 +4,8 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
+import { VendorTypes } from '../../api/vendor/VendorTypes';
+import { Vendors } from '../../api/vendor/Vendors';
 
 /**
  * In Bowfolios, insecure mode is enabled, so it is possible to update the server's Mongo database by making
@@ -46,6 +48,20 @@ Meteor.methods({
   },
 });
 
+const updateVendorMethod = 'Vendors.update';
+/**
+ * The server-side Vendors.update Meteor Method is called by the client-side Home page after pushing the update button.
+ * Its purpose is to update the Vendors, VendorTypes collections to reflect the
+ * updated situation specified by the user.
+ */
+Meteor.methods({
+  'Vendors.update'({ email, vendorName, campusLocation, vendorHours, description, picture, vendorTypes }) {
+    Vendors.collection.update({ email }, { $set: { email, vendorName, campusLocation, vendorHours, description, picture } });
+    VendorTypes.collection.remove({ vendor: email });
+    vendorTypes.map((vendorType) => VendorTypes.collection.insert({ vendor: email, vendorType }));
+  },
+});
+
 const addProjectMethod = 'Projects.add';
 
 /** Creates a new project in the Projects collection, and also updates ProfilesProjects and ProjectsInterests. */
@@ -65,4 +81,4 @@ Meteor.methods({
   },
 });
 
-export { updateProfileMethod, addProjectMethod };
+export { updateProfileMethod, addProjectMethod, updateVendorMethod };

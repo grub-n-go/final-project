@@ -44,11 +44,10 @@ class NavBar extends React.Component {
               exact to="/addProject" key='addP'><span className='nav-bar-bowfolio-red'>Add Project</span></Menu.Item>,
 
             <Menu.Item position='left' as={NavLink} id="filterMenuItem" activeClassName="active"
-              exact to="/filter" key='filter'><span className='nav-bar-bowfolio-red'>Filter</span></Menu.Item>]
-          ) : ''}
+              exact to="/filter" key='filter'><span className='nav-bar-bowfolio-red'>Filter</span></Menu.Item>,
 
-          {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-            <Menu.Item position='left' as={NavLink} id="adminMenuItem" activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>
+            <Menu.Item as={NavLink} id="AddVendor" activeClassName="active" exact to="/AddVendor" key='AddVendor'>
+              <span className='nav-bar-bowfolio-red'>Vendor</span></Menu.Item>]
           ) : ''}
           <Menu.Item fitted position='right'>
 

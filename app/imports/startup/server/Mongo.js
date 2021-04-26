@@ -7,6 +7,9 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { Interests } from '../../api/interests/Interests';
+import { VendorTypes } from '../../api/vendor/VendorTypes';
+import { VendorClass } from '../../api/interests/vendorClassifications';
+import { Vendors } from '../../api/vendor/Vendors';
 
 /* eslint-disable no-console */
 
@@ -24,6 +27,11 @@ function addInterest(interest) {
   Interests.collection.update({ name: interest }, { $set: { name: interest } }, { upsert: true });
 }
 
+/** Define a Vendor Type.  Has no effect if interest already exists. */
+function addVendorType(vendorType) {
+  VendorClass.collection.update({ vendor: vendorType }, { $set: { vendor: vendorType } }, { upsert: true });
+}
+
 /** Defines a new user and associated profile. Error if user already exists. */
 function addProfile({ firstName, lastName, bio, title, interests, projects, picture, email, role }) {
   console.log(`Defining profile ${email}`);
@@ -36,6 +44,19 @@ function addProfile({ firstName, lastName, bio, title, interests, projects, pict
   projects.map(project => ProfilesProjects.collection.insert({ profile: email, project }));
   // Make sure interests are defined in the Interests collection if they weren't already.
   interests.map(interest => addInterest(interest));
+}
+
+/** Defines a new vendor and associated vendor. Error if user already exists. */
+function addVendor({ vendorName, campusLocation, vendorHours, description, vendorTypes, picture, email, role }) {
+  console.log(`Defining profile ${email}`);
+  // Define the user in the Meteor accounts package.
+  createUser(email, role);
+  // Create the profile.
+  Vendors.collection.insert({ vendorName, campusLocation, vendorHours, description, picture, email });
+  // Add interests and projects.
+  vendorTypes.map(vendorType => VendorTypes.collection.insert({ vendor: email, vendorType }));
+  // Make sure interests are defined in the Interests collection if they weren't already.
+  vendorTypes.map(vendorType => addVendorType(vendorType));
 }
 
 /** Define a new project. Error if project already exists.  */
@@ -66,6 +87,14 @@ if (Profiles.collection.find().count() === 0) {
     Meteor.settings.defaultProfiles.map(profile => addProfile(profile));
   }
 }
+
+// Initialize the VendorsCollection if empty.
+if (Vendors.collection.find().count() === 0) {
+  if (Meteor.settings.defaultVendors) {
+    console.log('Creating default Vendors.');
+    Meteor.settings.defaultVendors.map(vendor => addVendor(vendor));
+  }
+}
 // Initialize the ProjectsCollection if empty.
 if (Projects.collection.find().count() === 0) {
   if (Meteor.settings.defaultProjects) {
@@ -73,7 +102,6 @@ if (Projects.collection.find().count() === 0) {
     Meteor.settings.defaultProjects.map(project => addProject(project));
   }
 }
-
 
 /**
  * If the loadAssetsFile field in settings.development.json is true, then load the data in private/data.json.
@@ -88,5 +116,6 @@ if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
   console.log(`Loading data from private/${assetsFileName}`);
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
   jsonData.profiles.map(profile => addProfile(profile));
+  jsonData.vendors.map(vendor => addVendor(vendor));
   jsonData.projects.map(project => addProject(project));
 }
