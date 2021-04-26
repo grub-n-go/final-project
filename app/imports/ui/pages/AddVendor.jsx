@@ -10,6 +10,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Vendors } from '../../api/vendor/Vendors';
 import { VendorTypes } from '../../api/vendor/VendorTypes';
+import { updateVendorMethod } from '../../startup/both/Methods';
 import { VendorClass } from '../../api/interests/vendorClassifications';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
@@ -30,16 +31,16 @@ class AddVendor extends React.Component {
   /** On submit, insert the data. */
   submit(data, formRef) {
     const { vendorName, campusLocation, vendorHours, description, picture } = data;
-    const owner = Meteor.user().username;
-    Vendors.collection.insert({ vendorName, campusLocation, vendorHours, description, picture, owner },
-      (error) => {
+    const email = Meteor.user().username;
+    Vendors.collection.insert({ email, vendorName, campusLocation, vendorHours, description, picture },
+      Meteor.call(updateVendorMethod, data, (error) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
           swal('Success', 'Profile added successfully', 'success');
           formRef.reset();
         }
-      });
+      }));
   }
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
@@ -49,7 +50,6 @@ class AddVendor extends React.Component {
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   renderPage() {
-    let fRef = null;
     const email = Meteor.user().username;
     // Create the form schema for uniforms. Need to determine all interests and projects for muliselect list.
     const allTypes = _.pluck(VendorClass.collection.find().fetch(), 'vendor');
@@ -64,7 +64,7 @@ class AddVendor extends React.Component {
         <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Welcome to Grub-n-Go</Header>
         <Grid id="AddVendor-page" container centered className='landing-white-background'>
           <Grid.Column>
-            <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+            <AutoForm model={model} schema={bridge} onSubmit={data => this.submit(data)}>
               <Header as="h2" textAlign="center" style={{ padding: '20px' }}>
                   Please Enter The Details To Your Food Venue
               </Header>
