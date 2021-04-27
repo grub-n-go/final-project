@@ -8,6 +8,7 @@ import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import MultiSelectField from '../forms/controllers/MultiSelectField';
 import { Vendors } from '../../api/vendor/Vendors';
 import { VendorTypes } from '../../api/vendor/VendorTypes';
 import { updateVendorMethod } from '../../startup/both/Methods';
@@ -21,8 +22,8 @@ const makeSchema = (allTypes) => new SimpleSchema({
   vendorHours: { type: String, label: 'Hours', optional: false },
   description: { type: String, label: 'Description Statement', optional: false },
   picture: { type: String, label: 'Picture URL', optional: false },
-  vendortype: { type: Array, label: 'Types Of Food Served', optional: false },
-  'vendortype.$': { type: String, allowedValues: allTypes },
+  vendorType: { type: Array, label: 'Types Of Food Served', optional: false },
+  'vendorType.$': { type: String, allowedValues: allTypes },
 });
 
 /** Renders the AddUser Page: what appears after the user logs in. */
@@ -56,9 +57,9 @@ class AddVendor extends React.Component {
     const formSchema = makeSchema(allTypes);
     const bridge = new SimpleSchema2Bridge(formSchema);
     // Now create the model with all the user information.
-    const vendortypes = _.pluck(VendorTypes.collection.find({ vendor: email }).fetch(), 'vendortype');
+    const vendorTypes = _.pluck(VendorTypes.collection.find({ vendor: email }).fetch(), 'vendorType');
     const vendor = Vendors.collection.findOne({ email });
-    const model = _.extend({}, vendor, { vendortypes });
+    const model = _.extend({}, vendor, { vendorTypes });
     return (
       <div className='welcome-background' style={{ paddingTop: '20px' }}>
         <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Welcome to Grub-n-Go</Header>
@@ -80,7 +81,8 @@ class AddVendor extends React.Component {
                 <LongTextField id='description' name='description' placeholder='Write a little bit about your venue.'/>
                 <TextField name='picture' showInlineError={true} placeholder={'URL to picture'}/>
                 <Form.Group widths={'equal'}>
-                  <TextField name='vendortype' showInlineError={true} placeholder={'i.e. Chinese, Korean, Indian'}/>
+                  <MultiSelectField id='vendorType' name='vendorType'
+                    showInlineError={true} placeholder={'i.e. Chinese, Korean, Indian'}/>
                 </Form.Group>
                 <SubmitField id='AddVendor-page-submit' value='Submit'/>
               </Segment>

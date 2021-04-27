@@ -12,7 +12,7 @@ class VendorTypesCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       vendor: String,
-      vendortype: String,
+      vendorType: String,
     }, { tracker: Tracker });
     // Ensure collection documents obey schema.
     this.collection.attachSchema(this.schema);

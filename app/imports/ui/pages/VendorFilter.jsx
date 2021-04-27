@@ -14,14 +14,14 @@ import MultiSelectField from '../forms/controllers/MultiSelectField';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const makeSchema = (allvendorTypes) => new SimpleSchema({
-  vendortypes: { type: Array, label: 'VendorTypes', optional: true },
-  'vendortypes.$': { type: String, allowedValues: allvendorTypes },
+  vendorTypes: { type: String, label: 'VendorTypes', optional: true },
+  'vendorTypes.$': { type: String, allowedValues: allvendorTypes },
 });
 
 function getVendorData(email) {
   const data = Vendors.collection.findOne({ email });
-  const vendortypes = _.pluck(VendorTypes.collection.find({ vendor: email }).fetch(), 'vendortype');
-  return _.extend({ }, data, { vendortypes });
+  const vendorTypes = _.pluck(VendorTypes.collection.find({ vendor: email }).fetch(), 'vendorType');
+  return _.extend({ }, data, { vendorTypes });
 }
 
 /** Component for layout out a Profile Card. */
@@ -37,8 +37,8 @@ const MakeCard = (props) => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      {_.map(props.vendor.vendortypes,
-        (vendortype, index) => <Label key={index} size='tiny' color='teal'>{vendortype}</Label>)}
+      {_.map(props.vendor.vendorTypes,
+        (vendorType, index) => <Label key={index} size='tiny' color='teal'>{vendorType}</Label>)}
     </Card.Content>
   </Card>
 );
@@ -53,11 +53,11 @@ class Filter extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { vendortypes: [] };
+    this.state = { vendorTypes: [] };
   }
 
   submit(data) {
-    this.setState({ vendortypes: data.vendortypes || [] });
+    this.setState({ vendorTypes: data.vendorTypes || [] });
   }
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
@@ -70,13 +70,13 @@ class Filter extends React.Component {
     const allvendorTypes = _.pluck(VendorClass.collection.find().fetch(), 'name');
     const formSchema = makeSchema(allvendorTypes);
     const bridge = new SimpleSchema2Bridge(formSchema);
-    const emails = _.pluck(VendorTypes.collection.find({ vendortype: { $in: this.state.vendortypes } }).fetch(), 'vendor');
+    const emails = _.pluck(VendorTypes.collection.find({ vendorType: { $in: this.state.vendorTypes } }).fetch(), 'vendor');
     const vendorData = _.uniq(emails).map(email => getVendorData(email));
     return (
       <Container id="filter-page">
         <AutoForm schema={bridge} onSubmit={data => this.submit(data)} >
           <Segment>
-            <MultiSelectField id='vendortypes' name='vendortypes' showInlineError={true} placeholder={'VendorTypes'}/>
+            <MultiSelectField id='vendorTypes' name='vendorTypes' showInlineError={true} placeholder={'VendorTypes'}/>
             <SubmitField id='submit' value='Submit'/>
           </Segment>
         </AutoForm>
