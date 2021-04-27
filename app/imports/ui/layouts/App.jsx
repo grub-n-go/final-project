@@ -19,11 +19,8 @@ import Signout from '../pages/Signout';
 import UserProfile from '../pages/UserProfile';
 import AddUser from '../pages/AddUser';
 import EditUser from '../pages/EditUser';
-<<<<<<< HEAD
 import Admin from '../pages/Admin';
-=======
 import AddVendor from '../pages/AddVendor';
->>>>>>> issue-48-Venues-Page-Rv
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
