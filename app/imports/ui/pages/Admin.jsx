@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Loader, Card, Image, Label, Header } from 'semantic-ui-react';
+import { Container, Loader, Card, Header } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -9,6 +9,9 @@ import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { Projects } from '../../api/projects/Projects';
 import UserCard from '../components/UserCard';
+import { Vendors } from '../../api/vendor/Vendors';
+import { VendorTypes } from '../../api/vendor/VendorTypes';
+import VendorCard from '../components/VendorCard';
 
 /** Returns the Profile and associated Projects and Interests associated with the passed user email. */
 function getProfileData(email) {
@@ -18,6 +21,13 @@ function getProfileData(email) {
   const projectPictures = projects.map(project => Projects.collection.findOne({ name: project }).picture);
   // console.log(_.extend({ }, data, { interests, projects: projectPictures }));
   return _.extend({ }, data, { interests, projects: projectPictures });
+}
+
+function getVendorData(email) {
+  const data = Vendors.collection.findOne({ email });
+  const vendorType = _.pluck(VendorTypes.collection.find({ profile: email }).fetch(), 'vendorType');
+  // console.log(_.extend({ }, data, { interests, projects: projectPictures }));
+  return _.extend({ }, data, { vendorType });
 }
 
 /** Renders the Profile Collection as a set of Cards. */
@@ -30,14 +40,22 @@ class Admin extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const emails = _.pluck(Profiles.collection.find().fetch(), 'email');
-    const profileData = emails.map(email => getProfileData(email));
+    const userEmails = _.pluck(Profiles.collection.find().fetch(), 'email');
+    const profileData = userEmails.map(userEmail => getProfileData(userEmail));
+    const vendorEmails = _.pluck(Vendors.collection.find().fetch(), 'email');
+    const vendorData = vendorEmails.map(vendorEmail => getVendorData(vendorEmail));
     return (
-      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+      <div style={{ paddingTop: '20px' }}>
+        <Header as="h2" textAlign="center">List Of Users</Header>
         <Container id="profiles-page">
-          <Header as="h2" textAlign="center" inverted>List Of Users</Header>
-          <Card.Group>
+          <Card.Group centered>
             {_.map(profileData, (userCard, index) => <UserCard key={index} userCard={userCard}/>)}
+          </Card.Group>
+        </Container>
+        <Header as="h2" textAlign="center">List Of Vendors</Header>
+        <Container id="profiles-page">
+          <Card.Group centered>
+            {_.map(vendorData, (vendorCard, index) => <VendorCard key={index} vendorCard={vendorCard}/>)}
           </Card.Group>
         </Container>
         <div className='green-gradient' style={{ paddingTop: '100px' }}/>
@@ -49,6 +67,7 @@ class Admin extends React.Component {
 
 Admin.propTypes = {
   userCard: PropTypes.array.isRequired,
+  vendorCard: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -59,7 +78,9 @@ export default withTracker(() => {
   const sub2 = Meteor.subscribe(ProfilesInterests.userPublicationName);
   const sub3 = Meteor.subscribe(ProfilesProjects.userPublicationName);
   const sub4 = Meteor.subscribe(Projects.userPublicationName);
+  const sub5 = Meteor.subscribe(VendorTypes.userPublicationName);
+  const sub6 = Meteor.subscribe(Vendors.userPublicationName);
   return {
-    ready: sub1.ready() && sub2.ready() && sub3.ready() && sub4.ready(),
+    ready: sub1.ready() && sub2.ready() && sub3.ready() && sub4.ready() && sub5.ready() && sub6.ready(),
   };
 })(Admin);
