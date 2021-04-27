@@ -132,5 +132,19 @@
       "picture": "https://www.hawaii.edu/its/wp-content/uploads/sites/2/2019/01/LAVAlogo-300x192-300x192.png"
     }
   ],
+  "defaultVendors": [
+    {
+      "vendorName": "Panda Express",
+      "vendorHours": "Johnson",
+      "campusLocation": "POST 307, University of Hawaii",
+      "picture": "https://philipmjohnson.github.io/images/philip2.jpeg",
+      "email": "john@foo.com",
+      "description": "I am a Professor of Information and Computer Sciences at the University of Hawaii, Director of the Collaborative Software Development Laboratory, and the CEO of OpenPowerQuality.com.",
+      "vendorType": [
+        "Chinese",
+        "Korean"
+      ]
+    }
+  ],
   "loadAssetsFile":  false
 }
