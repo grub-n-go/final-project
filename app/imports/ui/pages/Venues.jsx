@@ -22,12 +22,12 @@ const MakeCard = (props) => (
   <Card>
     <Card.Content>
       <Image floated='right' size='mini' src={props.profile.picture} />
-      <Card.Header>{props.profile.firstName} {props.profile.lastName}</Card.Header>
+      <Card.Header>{props.profile.vendorName}</Card.Header>
       <Card.Meta>
-        <span className='date'>{props.profile.title}</span>
+        <span className='date'>{props.profile.campusLocation}</span>
       </Card.Meta>
       <Card.Description>
-        {props.profile.bio}
+        {props.profile.description}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>

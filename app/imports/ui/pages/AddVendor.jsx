@@ -8,7 +8,6 @@ import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import MultiSelectField from '../forms/controllers/MultiSelectField';
 import { Vendors } from '../../api/vendor/Vendors';
 import { VendorTypes } from '../../api/vendor/VendorTypes';
 import { updateVendorMethod } from '../../startup/both/Methods';
@@ -22,7 +21,7 @@ const makeSchema = (allTypes) => new SimpleSchema({
   vendorHours: { type: String, label: 'Hours', optional: false },
   description: { type: String, label: 'Description Statement', optional: false },
   picture: { type: String, label: 'Picture URL', optional: false },
-  vendorType: { type: Array, label: 'Types Of Food Served', optional: false },
+  vendorType: { type: String, label: 'Types Of Food Served', optional: false },
   'vendorType.$': { type: String, allowedValues: allTypes },
 });
 
@@ -81,7 +80,7 @@ class AddVendor extends React.Component {
                 <LongTextField id='description' name='description' placeholder='Write a little bit about your venue.'/>
                 <TextField name='picture' showInlineError={true} placeholder={'URL to picture'}/>
                 <Form.Group widths={'equal'}>
-                  <MultiSelectField id='vendorType' name='vendorType'
+                  <TextField id='vendorType' name='vendorType'
                     showInlineError={true} placeholder={'i.e. Chinese, Korean, Indian'}/>
                 </Form.Group>
                 <SubmitField id='AddVendor-page-submit' value='Submit'/>
