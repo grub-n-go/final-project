@@ -10,42 +10,16 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { Projects } from '../../api/projects/Projects';
-import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
+import { Vendors } from '../../api/vendor/Vendors';
+import { VendorTypes } from '../../api/vendor/VendorTypes';
+import VendorCard from '../components/VendorCard';
 
 /** Gets the Project data as well as Profiles and Interests associated with the passed Project name. */
-function getProjectData(name) {
-  const data = Projects.collection.findOne({ name });
-  const interests = _.pluck(ProjectsInterests.collection.find({ project: name }).fetch(), 'interest');
-  const profiles = _.pluck(ProfilesProjects.collection.find({ project: name }).fetch(), 'profile');
-  const profilePictures = profiles.map(profile => Profiles.collection.findOne({ email: profile }).picture);
-  return _.extend({ }, data, { interests, participants: profilePictures });
+function getVendorData(email) {
+  const data = Vendors.collection.findOne({ email });
+  const vendorType = _.pluck(VendorTypes.collection.find({ profile: email }).fetch(), 'vendorType');
+  return _.extend({ }, data, { vendorType });
 }
-
-/** Component for layout out a Project Card. */
-const MakeCard = (props) => (
-  <Card>
-    <Card.Content>
-      <Image floated='left' avatar src={props.project.picture}/>
-      <Card.Header style={{ marginTop: '0px' }}>{props.project.name}</Card.Header>
-      <Card.Meta>
-        <span className='date'>{props.project.title}</span>
-      </Card.Meta>
-      <Card.Description>
-        {props.project.description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      {_.map(props.project.interests, (interest, index) => <Label key={index} size='tiny' color='teal'>{interest}</Label>)}
-    </Card.Content>
-    <Card.Content extra>
-      {_.map(props.project.participants, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
-    </Card.Content>
-  </Card>
-);
-
-MakeCard.propTypes = {
-  project: PropTypes.object.isRequired,
-};
 
 /** Renders the UserProfile Page: what appears after the user logs in. */
 class UserProfile extends React.Component {
@@ -59,10 +33,10 @@ class UserProfile extends React.Component {
   renderPage() {
     const email = Meteor.user().username;
     // Create the form schema for uniforms. Need to determine all interests and projects for muliselect list.
-    const projects = _.pluck(ProfilesProjects.collection.find({ profile: email }).fetch(), 'project');
     const interests = _.pluck(ProfilesInterests.collection.find({ profile: email }).fetch(), 'interest');
     const profile = Profiles.collection.findOne({ email });
-    const projectData = projects.map(project => getProjectData(project));
+    const vendorEmails = _.pluck(VendorTypes.collection.find({ vendorType: { interests } }).fetch(), 'email');
+    const vendorData = vendorEmails.map(vendorEmail => getVendorData(vendorEmail));
     return (
       <div className='welcome-background' style={{ paddingTop: '50px' }}>
         <Header as="h2" inverted style={{ fontSize: '100px', textAlign: 'center' }}>{profile.firstName}&nbsp;{profile.lastName}</Header>
@@ -116,7 +90,7 @@ class UserProfile extends React.Component {
         <Container centered className='landing-white-background' style={{ padding: '50px' }}>
           <Header as="h2" textAlign='center'>Favorites</Header>
           <Card.Group centered>
-            {_.map(projectData, (project, index) => <MakeCard key={index} project={project}/>)}
+            {_.map(vendorData, (vendorCard, index) => <VendorCard key={index} vendorCard={vendorCard}/>)}
           </Card.Group>
         </Container>
 
