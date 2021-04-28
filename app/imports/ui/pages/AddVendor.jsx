@@ -71,7 +71,7 @@ class AddVendor extends React.Component {
               </Header>
               <Segment>
                 <Form.Group widths={'equal'}>
-                  <TextField name='email' showInlineError={true} placeholder={'Where can you be reached'}/>
+                  <TextField name='email' id='email' showInlineError={true} placeholder={'Where can you be reached'}/>
                   <TextField id='vendorName' name='vendorName' showInlineError={true} placeholder={'The Name Of Your Venue'}/>
                 </Form.Group>
                 <Form.Group widths={'equal'}>
@@ -79,7 +79,7 @@ class AddVendor extends React.Component {
                   <TextField id='vendorHours' name='vendorHours' showInlineError={true} placeholder={'Hours Of Operation Of Your Business'}/>
                 </Form.Group>
                 <LongTextField id='description' name='description' placeholder='Write a little bit about your venue.'/>
-                <TextField name='picture' showInlineError={true} placeholder={'URL to picture'}/>
+                <TextField name='picture' id='picture' showInlineError={true} placeholder={'URL to picture'}/>
                 <Form.Group widths={'equal'}>
                   <MultiSelectField id='vendorType' name='vendorType'
                     showInlineError={true} placeholder={'i.e. Chinese, Korean, Indian'}/>

@@ -12,28 +12,32 @@ class AddVendorPage {
   }
 
   /** Checks this page is displayed, then adds a new project */
-  async addProject(testController) {
-    const vendorName = `radgrad-${new Date().getTime()}`;
-    const campusLocation = '...';
-    const vendorHours = '...';
-    const description = 'Growing awesome computer scientists, one graduate at a time.';
+  async addVendor(testController) {
+    const email = 'brokedamouth@foo.com';
+    const vendorName = 'Broke Da Mouth LLC';
+    const campusLocation = 'Paradise Palms Café';
+    const vendorHours = 'Monday – Friday: 8:00am – 5:00pm';
+    const description = 'Our foods so delicious it will literally break your mouth!';
+    const picture = 'https://image.shutterstock.com/image-vector/food-icon-design-template-260nw-1042503748.jpg';
     await this.isDisplayed(testController);
     // Define the new project
-    await testController.typeText('#name', vendorName);
+    await testController.typeText('#email', email);
+    await testController.typeText('#vendorName', vendorName);
     await testController.typeText('#campusLocation', campusLocation);
     await testController.typeText('#vendorHours', vendorHours);
     await testController.typeText('#description', description);
+    await testController.typeText('#picture', picture);
 
     // Select two interests.
-    const interestsSelector = Selector('#interests');
-    const chineseOption = interestsSelector.find('#Chinese');
-    const dessertOption = interestsSelector.find('#Dessert');
-    await testController.click(interestsSelector);
-    await testController.click(chineseOption);
-    await testController.click(dessertOption);
-    await testController.click(interestsSelector);
+    const typeSelector = Selector('#vendorType');
+    const localOption = typeSelector.find('#Local');
+    const hawaiianOption = typeSelector.find('#Hawaiian');
+    await testController.click(typeSelector);
+    await testController.click(localOption);
+    await testController.click(hawaiianOption);
+    await testController.click(typeSelector);
 
-    await testController.click('#submit');
+    await testController.click('#AddVendor-page-submit');
     await testController.click(Selector('.swal-button--confirm'));
   }
 }
