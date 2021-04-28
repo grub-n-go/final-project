@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Loader, Card, Image, Label, Grid, Divider, Segment, Header } from 'semantic-ui-react';
+import { Container, Loader, Card, Image, Grid, Segment, Header } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -20,33 +20,34 @@ import { VendorTypes } from '../../api/vendor/VendorTypes';
 //   return _.extend({ }, data, { interests, participants: profilePictures });
 // }
 
-/** Information regarding todays picks*/
-function getBreakfastData (){
+/** Information regarding todays picks */
+function getBreakfastData() {
   const mealName = 'Breakfast';
   const mealType = 'Chinese';
   const mealPicture = 'images/orangechicken.jpg';
-  const vendors = _.pluck(VendorTypes.collection.find({vendorType: mealType}).fetch(),'vendor');
-  const vendorsPictures = vendors.map(vendor => Vendors.collection.findOne({email: vendor}).picture);
-  return {mealName, mealType, mealPicture, vendorsPictures};
+  const vendors = _.pluck(VendorTypes.collection.find({ vendorType: mealType }).fetch(), 'vendor');
+  const vendorsPictures = vendors.map(vendor => Vendors.collection.findOne({ email: vendor }).picture);
+  return { mealName, mealType, mealPicture, vendorsPictures };
 }
-function getLunchData (){
+function getLunchData() {
   const mealName = 'Lunch';
   const mealType = 'Chinese';
   const mealPicture = 'images/orangechicken.jpg';
-  const vendors = _.pluck(VendorTypes.collection.find({vendorType: mealType}).fetch(),'vendor');
-  const vendorsPictures = vendors.map(vendor => Vendors.collection.findOne({email: vendor}).picture);
-  return {mealName, mealType, mealPicture, vendorsPictures};
+  const vendors = _.pluck(VendorTypes.collection.find({ vendorType: mealType }).fetch(), 'vendor');
+  const vendorsPictures = vendors.map(vendor => Vendors.collection.findOne({ email: vendor }).picture);
+  return { mealName, mealType, mealPicture, vendorsPictures };
 }
-function getDinnerData (){
+/* function getDinnerData() {
   const mealName = 'Dinner';
   const mealType = 'Chinese';
   const mealPicture = 'images/orangechicken.jpg';
-  const vendors = _.pluck(VendorTypes.collection.find({vendorType: mealType}).fetch(),'vendor');
-  const vendorsPictures = vendors.map(vendor => Vendors.collection.findOne({email: vendor}).picture);
-  return {mealName, mealType, mealPicture, vendorsPictures};
-}
+  const vendors = _.pluck(VendorTypes.collection.find({ vendorType: mealType }).fetch(), 'vendor');
+  const vendorsPictures = vendors.map(vendor => Vendors.collection.findOne({ email: vendor }).picture);
+  return { mealName, mealType, mealPicture, vendorsPictures };
+} */
 
 /** Component for layout out a meal Card. */
+// eslint-disable-next-line no-unused-vars
 const MakeCard = (props) => (
   <Card fluid>
     <Segment>
@@ -54,7 +55,8 @@ const MakeCard = (props) => (
         <Grid.Column width={4}>
           <Card.Content>
             <Grid.Row><Header as='h3' textAlign = 'centered'>Le Crêpe Café</Header></Grid.Row>
-            <Grid.Row><Image circular size='large' src='https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png'/></Grid.Row>
+            <Grid.Row><Image circular size='large' src='https://manoa.hawaii
+            .edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png'/></Grid.Row>
           </Card.Content>
         </Grid.Column>
         <Grid.Column width={9}>
@@ -81,47 +83,49 @@ const MakeCard = (props) => (
     </Segment>
   </Card>
 );
-//{_.map(props.mealInfo.vendorsPictures, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
+// {_.map(props.mealInfo.vendorsPictures, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
 MakeCard.propTypes = {
   mealInfo: PropTypes.object.isRequired,
 };
 
 /** Component for layout out a meal Card. */
+// eslint-disable-next-line no-unused-vars
 const MakeDaSpotCard = (props) => (
-    <Card fluid>
-      <Segment>
-        <Grid>
-          <Grid.Column width={4}>
-            <Card.Content>
-              <Grid.Row><Header as='h3' textAlign = 'centered'>Da Spot</Header></Grid.Row>
-              <Grid.Row><Image circular size='large' src='https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png'/></Grid.Row>
-            </Card.Content>
-          </Grid.Column>
-          <Grid.Column width={9}>
-            <Card.Content>
-              <Grid columns='equal' relaxed>
-                <Grid.Row><Header as='h3'>Smoothies</Header></Grid.Row>
-                <Grid.Row centered>
-                  <Grid.Column>DaKine</Grid.Column>
-                  <Grid.Column>Strawberries, Bananas, Lilikoi Sorbet, Passion Orange Juice</Grid.Column>
-                </Grid.Row>
-                <Grid.Row centered>
-                  <Grid.Column>AlohaBerry</Grid.Column>
-                  <Grid.Column>Mixberries, Bananas, Haupia Sorbet, Guava Juice, Soymilk</Grid.Column>
-                </Grid.Row>
-                <Grid.Row centered>
-                  <Grid.Column>OrangeSunset</Grid.Column>
-                  <Grid.Column>Peaches, Lychee Sorbet, Passion Orange Juice</Grid.Column>
-                </Grid.Row>
-              </Grid>
-            </Card.Content>
-          </Grid.Column>
-        </Grid>
+  <Card fluid>
+    <Segment>
+      <Grid>
+        <Grid.Column width={4}>
+          <Card.Content>
+            <Grid.Row><Header as='h3' textAlign = 'centered'>Da Spot</Header></Grid.Row>
+            <Grid.Row><Image circular size='large' src='https://manoa.hawaii
+            .edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png'/></Grid.Row>
+          </Card.Content>
+        </Grid.Column>
+        <Grid.Column width={9}>
+          <Card.Content>
+            <Grid columns='equal' relaxed>
+              <Grid.Row><Header as='h3'>Smoothies</Header></Grid.Row>
+              <Grid.Row centered>
+                <Grid.Column>DaKine</Grid.Column>
+                <Grid.Column>Strawberries, Bananas, Lilikoi Sorbet, Passion Orange Juice</Grid.Column>
+              </Grid.Row>
+              <Grid.Row centered>
+                <Grid.Column>AlohaBerry</Grid.Column>
+                <Grid.Column>Mixberries, Bananas, Haupia Sorbet, Guava Juice, Soymilk</Grid.Column>
+              </Grid.Row>
+              <Grid.Row centered>
+                <Grid.Column>OrangeSunset</Grid.Column>
+                <Grid.Column>Peaches, Lychee Sorbet, Passion Orange Juice</Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Card.Content>
+        </Grid.Column>
+      </Grid>
 
-      </Segment>
-    </Card>
+    </Segment>
+  </Card>
 );
-//{_.map(props.mealInfo.vendorsPictures, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
+// {_.map(props.mealInfo.vendorsPictures, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
 MakeDaSpotCard.propTypes = {
   mealInfo: PropTypes.object.isRequired,
 };
@@ -138,7 +142,7 @@ class TodaysMenuPage extends React.Component {
   renderPage() {
     const breakfastInfo = getBreakfastData();
     const lunchInfo = getLunchData();
-    const dinnerInfo = getDinnerData();
+    // const dinnerInfo = getDinnerData();
     return (
       <div className='welcome-background' id='todaysMenu-page' style={{ paddingTop: '20px' }}>
         <Container id="projects-page" textAlign='centered'>

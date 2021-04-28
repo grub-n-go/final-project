@@ -30,7 +30,7 @@ class SigninPage {
     await testController.typeText('#signin-form-password', password);
     await testController.click('#signin-form-submit');
     await navBar.isLoggedIn(testController, username);
-}
+  }
 }
 
 export const signinPage = new SigninPage();
