@@ -40,25 +40,29 @@ test('Test that signup page, then logout works', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test that profiles page displays', async (testController) => {
+// Profiles page is unused
+test.skip('Test that profiles page displays', async (testController) => {
   await navBar.gotoProfilesPage(testController);
   await profilesPage.isDisplayed(testController);
   await profilesPage.hasDefaultProfiles(testController);
 });
 
-test('Test that interests page displays', async (testController) => {
+// Interests page is unused
+test.skip('Test that interests page displays', async (testController) => {
   await navBar.gotoInterestsPage(testController);
   await interestsPage.isDisplayed(testController);
   await interestsPage.hasDefaultInterests(testController);
 });
 
-test('Test that projects page displays', async (testController) => {
+// Projects pags is unused
+test.skip('Test that projects page displays', async (testController) => {
   await navBar.gotoProjectsPage(testController);
   await projectsPage.isDisplayed(testController);
   await projectsPage.hasDefaultProjects(testController);
 });
 
-test('Test that home page display and profile modification works', async (testController) => {
+// Home page is unused
+test.skip('Test that Home page display and profile modification works', async (testController) => {
   await navBar.ensureLogout(testController);
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
@@ -76,6 +80,7 @@ test('Test that addProject page works', async (testController) => {
   await addProjectPage.addProject(testController);
 });
 
+// Filter page not used
 test('Test that filter page works', async (testController) => {
   await navBar.ensureLogout(testController);
   await navBar.gotoSigninPage(testController);

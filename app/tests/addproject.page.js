@@ -26,11 +26,11 @@ class AddProjectPage {
 
     // Select two interests.
     const interestsSelector = Selector('#interests');
-    const hpcOption = interestsSelector.find('#HPC');
-    const aiOption = interestsSelector.find('#AI');
+    const chineseOption = interestsSelector.find('#Chinese');
+    const dessertOption = interestsSelector.find('#Dessert');
     await testController.click(interestsSelector);
-    await testController.click(hpcOption);
-    await testController.click(aiOption);
+    await testController.click(chineseOption);
+    await testController.click(dessertOption);
     await testController.click(interestsSelector);
 
     await testController.click('#submit');
