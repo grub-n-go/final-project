@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, Header, Grid, Form, Button, Item, Container } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
@@ -14,9 +15,15 @@ class Footer extends React.Component {
                   <Header as="h5" inverted>Navigation</Header>
 
                   <Menu text vertical>
-                    <Menu.Item as='a'>Profiles</Menu.Item>
-                    <Menu.Item as='a'>Projects</Menu.Item>
-                    <Menu.Item as='a'>Interest</Menu.Item>
+                    <Menu.Item position='left' as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
+                      <span>Venues</span>
+                    </Menu.Item>
+                    <Menu.Item position='left' as={NavLink} id="todaysMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
+                      <span>Today&apos;s Menu</span>
+                    </Menu.Item>
+                    <Menu.Item position='left' as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
+                      <span>Top Picks</span>
+                    </Menu.Item>
                   </Menu>
 
                 </Grid.Column>
