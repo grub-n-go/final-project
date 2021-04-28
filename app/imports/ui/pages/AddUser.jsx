@@ -63,7 +63,7 @@ class AddUser extends React.Component {
     const profile = Profiles.collection.findOne({ email });
     const model = _.extend({}, profile, { interests, projects });
     return (
-      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+      <div className='welcome-background' id='add-user-page' style={{ paddingTop: '20px' }}>
         <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Welcome to Grub-n-Go</Header>
         <Grid id="AddUser-page" container centered className='landing-white-background'>
           <Grid.Column>
@@ -79,12 +79,11 @@ class AddUser extends React.Component {
                 </Form.Group>
                 <LongTextField id='bio' name='bio' placeholder='Write a little bit about yourself.'/>
                 <Form.Group widths={'equal'}>
-                  <TextField name='title' showInlineError={true} placeholder={'Title'}/>
-                  <TextField name='picture' showInlineError={true} placeholder={'URL to picture'}/>
+                  <TextField name='title' id='title' showInlineError={true} placeholder={'Title'}/>
+                  <TextField name='picture' id='picture' showInlineError={true} placeholder={'URL to picture'}/>
                 </Form.Group>
                 <Form.Group widths={'equal'}>
-                  <MultiSelectField name='interests' showInlineError={true} placeholder={'Interests'}/>
-                  <MultiSelectField name='projects' showInlineError={true} placeholder={'Projects'}/>
+                  <MultiSelectField name='interests' id='interests' showInlineError={true} placeholder={'Interests'}/>
                 </Form.Group>
                 <SubmitField id='AddUser-page-submit' value='Update'/>
               </Segment>
