@@ -1,13 +1,7 @@
 import { landingPage } from './landing.page';
-
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { signupPage } from './signup.page';
-import { profilesPage } from './profiles.page';
-import { projectsPage } from './projects.page';
-import { interestsPage } from './interests.page';
-import { homePage } from './home.page';
-import { addProjectPage } from './addproject.page';
 import { filterPage } from './filter.page';
 import { navBar } from './navbar.component';
 import { userProfile } from './userprofile.page';
@@ -15,6 +9,8 @@ import { venuesPage } from './venues.page';
 import { addUserPage } from './adduser.page';
 import { adminPage } from './admin.page';
 import { todaysMenuPage } from './todaysmenu.page';
+import { vendorSignupPage } from './vendorSignup.page';
+import { addVendorPage } from './addvendor.page';
 
 /* global fixture:false, test:false */
 
@@ -60,6 +56,17 @@ test('Test that admin page displays', async (testController) => {
   await adminPage.hasDefaultProfiles(testController);
 });
 
+test('Test that SignUpVendor and addVendor page works', async (testController) => {
+  // Create a new user email address that's guaranteed to be unique.
+  const newVendor = `vendor-${new Date().getTime()}@foo.com`;
+  await navBar.gotoSignupVendorPage(testController);
+  await vendorSignupPage.isDisplayed(testController);
+  await vendorSignupPage.signupVendor(testController, newVendor, credentials.password);
+  // enters user data
+  await addVendorPage.isDisplayed(testController);
+  await addVendorPage.addVendor(testController);
+});
+
 test('Test that signin and signout work', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
@@ -78,51 +85,52 @@ test('Test that signup page, then logout works', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test.only('Test that TodaysMenu page displays', async (testController) => {
+test('Test that TodaysMenu page displays', async (testController) => {
   await navBar.gotoTodaysMenuPage(testController);
   await todaysMenuPage.isDisplayed(testController);
   await todaysMenuPage.hasDefaultMenus(testController);
 });
 
 // Profiles page is unused
-test.skip('Test that profiles page displays', async (testController) => {
-  await navBar.gotoProfilesPage(testController);
-  await profilesPage.isDisplayed(testController);
-  await profilesPage.hasDefaultProfiles(testController);
-});
+// test.skip('Test that profiles page displays', async (testController) => {
+// await navBar.gotoProfilesPage(testController);
+// await profilesPage.isDisplayed(testController);
+// await profilesPage.hasDefaultProfiles(testController);
+// });
 
 // Interests page is unused
-test.skip('Test that interests page displays', async (testController) => {
-  await navBar.gotoInterestsPage(testController);
-  await interestsPage.isDisplayed(testController);
-  await interestsPage.hasDefaultInterests(testController);
-});
+// test.skip('Test that interests page displays', async (testController) => {
+// await navBar.gotoInterestsPage(testController);
+// await interestsPage.isDisplayed(testController);
+// await interestsPage.hasDefaultInterests(testController);
+// });
 
 // Projects page is unused
-test.skip('Test that projects page displays', async (testController) => {
-  await navBar.gotoProjectsPage(testController);
-  await projectsPage.isDisplayed(testController);
-  await projectsPage.hasDefaultProjects(testController);
-});
+// test.skip('Test that projects page displays', async (testController) => {
+// await navBar.gotoProjectsPage(testController);
+// await projectsPage.isDisplayed(testController);
+// await projectsPage.hasDefaultProjects(testController);
+// });
 
 // Home page is unused
-test.skip('Test that Home page display and profile modification works', async (testController) => {
-  await navBar.ensureLogout(testController);
-  await navBar.gotoSigninPage(testController);
-  await signinPage.signin(testController, credentials.username, credentials.password);
-  await homePage.isDisplayed(testController);
-  await homePage.updateProfile(testController, credentials.firstName);
-  await navBar.ensureLogout(testController);
-});
+// test.skip('Test that Home page display and profile modification works', async (testController) {
+// await navBar.ensureLogout(testController);
+// await navBar.gotoSigninPage(testController);
+// await signinPage.signin(testController, credentials.username, credentials.password);
+// await homePage.isDisplayed(testController);
+// await homePage.updateProfile(testController, credentials.firstName);
+// await navBar.ensureLogout(testController);
+// });
 
-test('Test that addProject page works', async (testController) => {
-  await navBar.ensureLogout(testController);
-  await navBar.gotoSigninPage(testController);
-  await signinPage.signin(testController, credentials.username, credentials.password);
-  await navBar.gotoAddProjectPage(testController);
-  await addProjectPage.isDisplayed(testController);
-  await addProjectPage.addProject(testController);
-});
+// addProject page is unused
+// test('Test that addProject page works', async (testController) => {
+//  await navBar.ensureLogout(testController);
+//  await navBar.gotoSigninPage(testController);
+//  await signinPage.signin(testController, credentials.username, credentials.password);
+//  await navBar.gotoAddProjectPage(testController);
+//  await addProjectPage.isDisplayed(testController);
+//  await addProjectPage.addProject(testController);
+// });
 
 // Filter page not used
 test('Test that filter page works', async (testController) => {
