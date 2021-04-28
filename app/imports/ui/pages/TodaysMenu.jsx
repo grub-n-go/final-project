@@ -55,8 +55,10 @@ const MakeCard = (props) => (
         <Grid.Column width={4}>
           <Card.Content>
             <Grid.Row><Header as='h3' textAlign = 'centered'>Le Crêpe Café</Header></Grid.Row>
-            <Grid.Row><Image circular size='large' src='https://manoa.hawaii
-            .edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png'/></Grid.Row>
+            <Grid.Row>
+              <Image circular size='large'
+                     src='https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png'/>
+            </Grid.Row>
           </Card.Content>
         </Grid.Column>
         <Grid.Column width={9}>
@@ -97,8 +99,10 @@ const MakeDaSpotCard = (props) => (
         <Grid.Column width={4}>
           <Card.Content>
             <Grid.Row><Header as='h3' textAlign = 'centered'>Da Spot</Header></Grid.Row>
-            <Grid.Row><Image circular size='large' src='https://manoa.hawaii
-            .edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png'/></Grid.Row>
+            <Grid.Row>
+              <Image circular size='large'
+                     src='https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png'/>
+            </Grid.Row>
           </Card.Content>
         </Grid.Column>
         <Grid.Column width={9}>
