@@ -65,7 +65,7 @@ class NavBar extends React.Component {
                     text="Sign In" as={NavLink} exact to="/signin"/>
                   <Dropdown.Item id="login-dropdown-sign-up" icon="add user"
                     text="User Sign Up" as={NavLink} exact to="/signup"/>
-                  <Dropdown.Item id="login-dropdown-sign-up" icon="add user"
+                  <Dropdown.Item id="login-dropdown-sign-up-vendor" icon="add user"
                     text="Vendor Sign Up" as={NavLink} exact to="/vendorsignup"/>
                 </Dropdown.Menu>
               </Dropdown>
