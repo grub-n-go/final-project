@@ -16,14 +16,14 @@ class FilterPage {
     await this.isDisplayed(testController);
     // Select visualization and submit
     const interestsSelector = Selector('#interests');
-    const visualizationOption = interestsSelector.find('#Visualization');
+    const chineseOption = interestsSelector.find('#Chinese');
     await testController.click(interestsSelector);
-    await testController.click(visualizationOption);
+    await testController.click(chineseOption);
     await testController.click(interestsSelector);
     await testController.click('#submit');
     // Check that only one card is displayed.
     const cardCount = Selector('.ui .card').count;
-    await testController.expect(cardCount).eql(1);
+    await testController.expect(cardCount).eql(2);
   }
 }
 
