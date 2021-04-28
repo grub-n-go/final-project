@@ -8,7 +8,7 @@ import { Profiles } from '../../api/profiles/Profiles';
 /**
  * Signup component is similar to signin component, but we create a new user instead.
  */
-class Signup extends React.Component {
+class VendorSignup extends React.Component {
   /** Initialize state fields. */
   constructor(props) {
     super(props);
@@ -40,7 +40,7 @@ class Signup extends React.Component {
 
   /** Display the signup form. */
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/adduser' } };
+    const { from } = this.props.location.state || { from: { pathname: '/addvendor' } };
     // if correct authentication, redirect to page instead of login screen
     if (this.state.redirectToReferer) {
       return <Redirect to={from}/>;
@@ -53,7 +53,7 @@ class Signup extends React.Component {
             <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
               <Grid.Column>
                 <Header as="h2" textAlign="center">
-                Sign up for a new account
+                    Sign up for a new account
                 </Header>
                 <Form onSubmit={this.submit}>
                   <Segment stacked>
@@ -81,7 +81,7 @@ class Signup extends React.Component {
                   </Segment>
                 </Form>
                 <Message>
-                Already have an account? Login <Link to="/signin">here</Link>
+                    Already have an account? Login <Link to="/signin">here</Link>
                 </Message>
                 {this.state.error === '' ? (
                   ''
@@ -106,8 +106,8 @@ class Signup extends React.Component {
 }
 
 /** Ensure that the React Router location object is available in case we need to redirect. */
-Signup.propTypes = {
+VendorSignup.propTypes = {
   location: PropTypes.object,
 };
 
-export default Signup;
+export default VendorSignup;
