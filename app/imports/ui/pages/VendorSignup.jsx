@@ -53,7 +53,7 @@ class VendorSignup extends React.Component {
             <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
               <Grid.Column>
                 <Header as="h2" textAlign="center">
-                    Sign up for a new account
+                    Sign up for a new vendor account
                 </Header>
                 <Form onSubmit={this.submit}>
                   <Segment stacked>
