@@ -4,7 +4,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { Projects } from '../../api/projects/Projects';
 import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
 import { Profiles } from '../../api/profiles/Profiles';
-import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
+// import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { Interests } from '../../api/interests/Interests';
 import { VendorTypes } from '../../api/vendor/VendorTypes';
@@ -33,7 +33,7 @@ function addVendorType(vendorType) {
 }
 
 /** Defines a new user and associated profile. Error if user already exists. */
-function addProfile({ firstName, lastName, bio, title, interests, projects, picture, email, role }) {
+function addProfile({ firstName, lastName, bio, title, interests /** projects */, picture, email, role }) {
   console.log(`Defining profile ${email}`);
   // Define the user in the Meteor accounts package.
   createUser(email, role);
@@ -41,7 +41,7 @@ function addProfile({ firstName, lastName, bio, title, interests, projects, pict
   Profiles.collection.insert({ firstName, lastName, bio, title, picture, email });
   // Add interests and projects.
   interests.map(interest => ProfilesInterests.collection.insert({ profile: email, interest }));
-  projects.map(project => ProfilesProjects.collection.insert({ profile: email, project }));
+  // projects.map(project => ProfilesProjects.collection.insert({ profile: email, project }));
   // Make sure interests are defined in the Interests collection if they weren't already.
   interests.map(interest => addInterest(interest));
 }
