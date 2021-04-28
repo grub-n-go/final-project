@@ -140,7 +140,7 @@ class TodaysMenuPage extends React.Component {
     const lunchInfo = getLunchData();
     const dinnerInfo = getDinnerData();
     return (
-      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+      <div className='welcome-background' id='todaysMenu-page' style={{ paddingTop: '20px' }}>
         <Container id="projects-page" textAlign='centered'>
           <Grid columns='equal'>
             <Grid.Row>

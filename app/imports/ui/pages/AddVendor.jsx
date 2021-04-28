@@ -61,7 +61,7 @@ class AddVendor extends React.Component {
     const vendor = Vendors.collection.findOne({ email });
     const model = _.extend({}, vendor, { vendorTypes });
     return (
-      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+      <div className='welcome-background' id='add-vendor-page' style={{ paddingTop: '20px' }}>
         <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Welcome to Grub-n-Go</Header>
         <Grid id="AddVendor-page" container centered className='landing-white-background'>
           <Grid.Column>

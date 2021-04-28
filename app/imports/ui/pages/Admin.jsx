@@ -45,7 +45,7 @@ class Admin extends React.Component {
     const vendorEmails = _.pluck(Vendors.collection.find().fetch(), 'email');
     const vendorData = vendorEmails.map(vendorEmail => getVendorData(vendorEmail));
     return (
-      <div style={{ paddingTop: '20px' }}>
+      <div id='admin-page' style={{ paddingTop: '20px' }}>
         <Header as="h2" textAlign="center">List Of Users</Header>
         <Container id="profiles-page">
           <Card.Group centered>

@@ -38,7 +38,7 @@ class UserProfile extends React.Component {
     const vendorEmails = _.pluck(VendorTypes.collection.find({ vendorType: { interests } }).fetch(), 'email');
     const vendorData = vendorEmails.map(vendorEmail => getVendorData(vendorEmail));
     return (
-      <div className='welcome-background' style={{ paddingTop: '50px' }}>
+      <div className='welcome-background' id='userprofile-page' style={{ paddingTop: '50px' }}>
         <Header as="h2" inverted style={{ fontSize: '100px', textAlign: 'center' }}>{profile.firstName}&nbsp;{profile.lastName}</Header>
         <Container className='landing-white-background'>
           <Grid id="UserProfile-page" container centered style={{ paddingTop: '20px' }}>

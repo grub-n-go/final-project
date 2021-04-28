@@ -17,8 +17,20 @@ class NavBar {
     await testController.click('#login-dropdown-sign-in');
   }
 
-  async gotoProfilesPage(testController) {
-    await testController.click('#profilesMenuItem');
+  async gotoUserProfilePage(testController) {
+    await testController.click('#userProfileMenuItem');
+  }
+
+  async gotoVenuesPage(testController) {
+    await testController.click('#venuesMenuItem');
+  }
+
+  async gotoAdminPage(testController) {
+    await testController.click('#adminMenuItem');
+  }
+
+  async gotoTodaysMenuPage(testController) {
+    await testController.click('#todaysMenuMenuItem');
   }
 
   async gotoInterestsPage(testController) {
