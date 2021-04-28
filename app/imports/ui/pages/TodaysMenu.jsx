@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Loader, Card, Image, Label, Grid, Divider, Segment } from 'semantic-ui-react';
+import { Container, Loader, Card, Image, Label, Grid, Divider, Segment, Header } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -53,14 +53,26 @@ const MakeCard = (props) => (
       <Grid>
         <Grid.Column width={4}>
           <Card.Content>
-            <Grid.Row><Card.Header textAlign='center' style={{ marginTop: '0px' }}>Le Crêpe Café</Card.Header></Grid.Row>
+            <Grid.Row><Header as='h3' textAlign = 'centered'>Le Crêpe Café</Header></Grid.Row>
             <Grid.Row><Image circular size='large' src='https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png'/></Grid.Row>
           </Card.Content>
         </Grid.Column>
         <Grid.Column width={9}>
           <Card.Content>
-            <Grid>
-              <Grid.Row><Card.Header textAlign='center' style={{ marginTop: '0px' }}>Savory Crepes</Card.Header></Grid.Row>
+            <Grid columns='equal' relaxed>
+              <Grid.Row><Header as='h3'>Savory Crepes</Header></Grid.Row>
+              <Grid.Row centered>
+                <Grid.Column>Cheese Louise</Grid.Column>
+                <Grid.Column>Mozzarella, jack, and cheddar cheese trio</Grid.Column>
+              </Grid.Row>
+              <Grid.Row centered>
+                <Grid.Column>Le Bacon</Grid.Column>
+                <Grid.Column>Cheese trio, bacon, and egg</Grid.Column>
+              </Grid.Row>
+              <Grid.Row centered>
+                <Grid.Column>Popeye</Grid.Column>
+                <Grid.Column>Mozzarella, spinach, mushrooms, and garlic</Grid.Column>
+              </Grid.Row>
             </Grid>
           </Card.Content>
         </Grid.Column>
@@ -71,6 +83,46 @@ const MakeCard = (props) => (
 );
 //{_.map(props.mealInfo.vendorsPictures, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
 MakeCard.propTypes = {
+  mealInfo: PropTypes.object.isRequired,
+};
+
+/** Component for layout out a meal Card. */
+const MakeDaSpotCard = (props) => (
+    <Card fluid>
+      <Segment>
+        <Grid>
+          <Grid.Column width={4}>
+            <Card.Content>
+              <Grid.Row><Header as='h3' textAlign = 'centered'>Da Spot</Header></Grid.Row>
+              <Grid.Row><Image circular size='large' src='https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png'/></Grid.Row>
+            </Card.Content>
+          </Grid.Column>
+          <Grid.Column width={9}>
+            <Card.Content>
+              <Grid columns='equal' relaxed>
+                <Grid.Row><Header as='h3'>Smoothies</Header></Grid.Row>
+                <Grid.Row centered>
+                  <Grid.Column>DaKine</Grid.Column>
+                  <Grid.Column>Strawberries, Bananas, Lilikoi Sorbet, Passion Orange Juice</Grid.Column>
+                </Grid.Row>
+                <Grid.Row centered>
+                  <Grid.Column>AlohaBerry</Grid.Column>
+                  <Grid.Column>Mixberries, Bananas, Haupia Sorbet, Guava Juice, Soymilk</Grid.Column>
+                </Grid.Row>
+                <Grid.Row centered>
+                  <Grid.Column>OrangeSunset</Grid.Column>
+                  <Grid.Column>Peaches, Lychee Sorbet, Passion Orange Juice</Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Card.Content>
+          </Grid.Column>
+        </Grid>
+
+      </Segment>
+    </Card>
+);
+//{_.map(props.mealInfo.vendorsPictures, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
+MakeDaSpotCard.propTypes = {
   mealInfo: PropTypes.object.isRequired,
 };
 
@@ -95,10 +147,7 @@ class TodaysMenuPage extends React.Component {
               <MakeCard mealInfo={breakfastInfo}/>
             </Grid.Row>
             <Grid.Row>
-              <MakeCard mealInfo={lunchInfo}/>
-            </Grid.Row>
-            <Grid.Row>
-              <MakeCard mealInfo={dinnerInfo}/>
+              <MakeDaSpotCard mealInfo={lunchInfo}/>
             </Grid.Row>
           </Grid>
         </Container>
