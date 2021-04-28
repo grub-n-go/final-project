@@ -138,7 +138,8 @@
       "description": "Panda Express serves gourmet Chinese food made with only the freshest ingredients.",
       "vendorTypes": [
         "Chinese",
-        "Korean"
+        "Korean",
+        "Indian"
       ]
     },
     {

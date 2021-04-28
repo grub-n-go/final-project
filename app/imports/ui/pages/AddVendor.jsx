@@ -31,9 +31,9 @@ class AddVendor extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { vendorName, campusLocation, vendorHours, description, picture } = data;
+    const { vendorName, campusLocation, vendorHours, description, picture, vendorType } = data;
     const email = Meteor.user().username;
-    Vendors.collection.insert({ email, vendorName, campusLocation, vendorHours, description, picture },
+    Vendors.collection.insert({ email, vendorName, campusLocation, vendorHours, description, picture, vendorType },
       Meteor.call(updateVendorMethod, data, (error) => {
         if (error) {
           swal('Error', error.message, 'error');

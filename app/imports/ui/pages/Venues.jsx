@@ -26,12 +26,15 @@ const MakeCard = (props) => (
       <Card.Meta>
         <span className='date'>{props.profile.campusLocation}</span>
       </Card.Meta>
+      <Card.Meta>
+        <span className='date'>{props.profile.vendorHours}</span>
+      </Card.Meta>
       <Card.Description>
         {props.profile.description}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      {_.map(props.profile.vendorType,
+      {_.map(props.profile.vendorTypes,
         (vendorType, index) => <Label key={index} size='tiny' color='teal'>{vendorType}</Label>)}
     </Card.Content>
     <Card.Content extra>
