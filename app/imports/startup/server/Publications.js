@@ -24,7 +24,7 @@ Meteor.publish(Vendors.userPublicationName, () => Vendors.collection.find());
 /** Define a publication to publish this collection. */
 Meteor.publish(ProfilesInterests.userPublicationName, () => ProfilesInterests.collection.find());
 
-/** Define a publication to publish this collection VendorTpyes. */
+/** Define a publication to publish this collection VendorTypes. */
 Meteor.publish(VendorTypes.userPublicationName, () => VendorTypes.collection.find());
 
 /** Define a publication to publish this collection. */
