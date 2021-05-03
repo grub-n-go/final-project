@@ -1,68 +1,49 @@
 import React from 'react';
-import { Menu, Header, Grid, Form, Button, Item, Container } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
+import { Header, Grid, Container, Image, Item, Divider } from 'semantic-ui-react';
+import { Link, NavLink } from 'react-router-dom';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
     return (
-      <div className='footer-background'>
-        <footer>
-          <div className="footer-background">
-            <Container>
-              <Grid padded container stackable columns='equal'>
-                <Grid.Column>
-                  <Header as="h5" inverted>Navigation</Header>
-
-                  <Menu text vertical>
-                    <Menu.Item position='left' as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
-                      <span>Venues</span>
-                    </Menu.Item>
-                    <Menu.Item position='left' as={NavLink} id="todaysMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
-                      <span>Today&apos;s Menu</span>
-                    </Menu.Item>
-                    <Menu.Item position='left' as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
-                      <span>Top Picks</span>
-                    </Menu.Item>
-                  </Menu>
-
+      <footer>
+        <div className="footer-background">
+          <Container textAlign='center'>
+            <Header id='footer-header' as='h3'>Made By:</Header>
+            <Grid textAlign='center' padded container columns='equal'>
+              <Grid.Row>
+                <Grid.Column width={4}>
+                  <p id='crew'>The<Image spaced size='small' src="images/grub-n-go-inverted-logo.png"/>Crew</p>
                 </Grid.Column>
 
-                <Grid.Column>
-                  <Header as="h5" inverted>Contact Us</Header>
-                  <Form>
-                    <Form.Field>
-                      <input placeholder='Name'/>
-                    </Form.Field>
-                    <Form.Field>
-                      <input placeholder='Email Address'/>
-                    </Form.Field>
-                    <Form.Field>
-                      <input placeholder='Let us know'/>
-                    </Form.Field>
-                    <Button color='blue' type='Subscribe'>Email</Button>
-                  </Form>
+                <Grid.Column width={1}>
+                  <Divider id='footer-header' vertical inverted>Members</Divider>
                 </Grid.Column>
+                <Grid.Column textAlign='center' id='footer-header' style={{ paddingTop: '50px' }}>
+                  <p>Ryan Vizcarra</p>
+                  <p>Kristine Rivera</p>
+                  <p>Karl Penuliar</p>
+                  <p>Michael Pierce</p>
 
-                <Grid.Column>
-                  <Item.Group relaxed>
-                    <Item>
-                      {/* eslint-disable-next-line max-len */}
-                      <Item.Image size='small' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hawaii_Warriors_logo.svg/1200px-Hawaii_Warriors_logo.svg.png'/>
-                    </Item>
-                    <Header as='h1' inverted>Grub-n-Go</Header>
-                  </Item.Group>
                 </Grid.Column>
-
                 <Grid.Column>
-                  <Header as="h5" inverted>Grub-n-Go Crew</Header>
+                  <Divider width={1} id='footer-header'vertical inverted>Collab</Divider>
                 </Grid.Column>
-              </Grid>
+                <Grid.Column id='footer-header'>
+                  <Image centered size='small'
+                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hawaii_Warriors_logo.svg/1200px-Hawaii_Warriors_logo.svg.png'/>
+                  <Header id='footer-header' as='h4'>Special Thanks to</Header>
+                  <p>Professor: Philip Johnson </p>
+                  <p>Teacher Assistant: Branden Ogata</p>
+                </Grid.Column>
+              </Grid.Row>
 
-            </Container>
-          </div>
-        </footer>
-      </div>
+            </Grid>
+
+          </Container>
+        </div>
+      </footer>
+
     );
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Loader, Card, Image, Label, Header } from 'semantic-ui-react';
+import { Container, Loader, Card, Image, Label } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -22,7 +22,7 @@ const MakeCard = (props) => (
   <Card>
     <Card.Content>
       <Image floated='right' size='mini' src={props.profile.picture} />
-      <Card.Header>{props.profile.vendorName}</Card.Header>
+      <Card.Header id='cards'>{props.profile.vendorName}</Card.Header>
       <Card.Meta>
         <span className='date'>{props.profile.campusLocation}</span>
       </Card.Meta>
@@ -33,13 +33,9 @@ const MakeCard = (props) => (
         {props.profile.description}
       </Card.Description>
     </Card.Content>
-    <Card.Content extra>
+    <Card.Content extra id='cards'>
       {_.map(props.profile.vendorTypes,
         (vendorType, index) => <Label key={index} size='tiny' color='teal'>{vendorType}</Label>)}
-    </Card.Content>
-    <Card.Content extra>
-      <Header as='h5'>Projects</Header>
-      {_.map(props.profile.vendor, (vendor, index) => <Image key={index} size='mini' src={Vendors}/>)}
     </Card.Content>
   </Card>
 );
@@ -61,7 +57,7 @@ class ProfilesPage extends React.Component {
     const emails = _.pluck(Vendors.collection.find().fetch(), 'email');
     const profileData = emails.map(email => getProfileData(email));
     return (
-      <div className='welcome-background' id='venues-page' style={{ paddingTop: '20px' }}>
+      <div className='pages-background' id='venues-page' style={{ paddingTop: '20px' }}>
         <Container id="profiles-page">
           <Card.Group>
             {_.map(profileData, (profile, index) => <MakeCard key={index} profile={profile}/>)}

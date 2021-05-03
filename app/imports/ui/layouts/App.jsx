@@ -30,7 +30,7 @@ class App extends React.Component {
       <Router>
         <div>
           <NavBar/>
-          <div>
+          <div style={{ marginTop: '65px' }}>
             <Switch>
               <Route exact path="/" component={Landing}/>
               <ProtectedRoute path="/edituser" component={EditUser}/>

@@ -51,7 +51,7 @@ class InterestsPage extends React.Component {
     const interests = _.pluck(Interests.collection.find().fetch(), 'name');
     const interestData = interests.map(interest => getInterestData(interest));
     return (
-      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+      <div className='pages-background' style={{ paddingTop: '20px' }}>
         <Container id="interests-page">
           <Card.Group>
             {_.map(interestData, (interest, index) => <MakeCard key={index} interest={interest}/>)}

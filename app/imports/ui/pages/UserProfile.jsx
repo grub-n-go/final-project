@@ -38,16 +38,16 @@ class UserProfile extends React.Component {
     const vendorEmails = _.pluck(VendorTypes.collection.find({ vendorType: { interests } }).fetch(), 'email');
     const vendorData = vendorEmails.map(vendorEmail => getVendorData(vendorEmail));
     return (
-      <div className='welcome-background' id='userprofile-page' style={{ paddingTop: '50px' }}>
-        <Header as="h2" inverted style={{ fontSize: '100px', textAlign: 'center' }}>{profile.firstName}&nbsp;{profile.lastName}</Header>
-        <Container className='landing-white-background'>
-          <Grid id="UserProfile-page" container centered style={{ paddingTop: '20px' }}>
+      <div className='pages-background' id='userprofile-page' style={{ paddingTop: '50px' }}>
+        <Container className='containers'>
+          <Header id='welcome2' as="h2" inverted style={{ textAlign: 'center' }}>{profile.firstName}&nbsp;{profile.lastName}</Header>
+          <Grid id="UserProfile-page" container centered>
 
             <Grid.Row>
-              <Grid.Column width={3}>
-                <Image src={profile.picture}/>
+              <Grid.Column width={2}>
+                <Image size='massive' src={profile.picture}/>
               </Grid.Column>
-              <Grid.Column width={9}>
+              <Grid.Column width={4}>
 
                 <Item.Group relaxed>
 
@@ -81,17 +81,18 @@ class UserProfile extends React.Component {
                   <Link as={NavLink} id="EditUserMenuItem" activeClassName="active" exact to="/edituser" key='home'>Edit</Link>
                 </Label>
               </Grid.Column>
+              <Grid.Column width={9}>
+                <Container centered>
+                  <Header id='welcome' as="h2" textAlign='center'>Favorites</Header>
+                  <Card.Group centered>
+                    {_.map(vendorData, (vendorCard, index) => <VendorCard key={index} vendorCard={vendorCard}/>)}
+                  </Card.Group>
+                </Container>
+              </Grid.Column>
 
             </Grid.Row>
 
           </Grid>
-        </Container>
-
-        <Container centered className='landing-white-background' style={{ padding: '50px' }}>
-          <Header as="h2" textAlign='center'>Favorites</Header>
-          <Card.Group centered>
-            {_.map(vendorData, (vendorCard, index) => <VendorCard key={index} vendorCard={vendorCard}/>)}
-          </Card.Group>
         </Container>
 
         <div className='green-gradient'>

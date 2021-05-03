@@ -47,7 +47,7 @@ class VendorSignup extends React.Component {
     }
 
     return (
-      <div className='welcome-background' id="vendorSignup-page">
+      <div className='pages-background' id="vendorSignup-page">
         <div>
           <Container style={{ paddingTop: '10px' }}>
             <Grid textAlign="center" verticalAlign="middle" centered columns={2}>

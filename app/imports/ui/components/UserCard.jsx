@@ -8,7 +8,7 @@ import { _ } from 'meteor/underscore';
 class UserCard extends React.Component {
   render() {
     return (
-      <Card>
+      <Card className='cards'>
         <Card.Content>
           <Image floated='right' size='mini' src={this.props.userCard.picture} />
           <Card.Header>{this.props.userCard.firstName} {this.props.userCard.lastName}</Card.Header>

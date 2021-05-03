@@ -61,11 +61,11 @@ class AddVendor extends React.Component {
     const vendor = Vendors.collection.findOne({ email });
     const model = _.extend({}, vendor, { vendorTypes });
     return (
-      <div className='welcome-background' id='add-vendor-page' style={{ paddingTop: '20px' }}>
-        <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Welcome to Grub-n-Go</Header>
-        <Grid id="AddVendor-page" container centered className='landing-white-background'>
+      <div className='pages-background' id='add-vendor-page' style={{ paddingTop: '20px' }}>
+        <Grid className='containers' id="AddVendor-page" container centered>
           <Grid.Column>
             <AutoForm model={model} schema={bridge} onSubmit={data => this.submit(data)}>
+              <Header as="h1" textAlign="center">Welcome to Grub-n-Go</Header>
               <Header as="h2" textAlign="center" style={{ padding: '20px' }}>
                   Please Enter The Details To Your Food Venue
               </Header>

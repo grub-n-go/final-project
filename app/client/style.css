@@ -1,66 +1,130 @@
 /* Custom site-wide CSS */
 
-.ui.borderless.top.attached.menu{
-  box-shadow: none;
-  border: none;
-}
-
-.bowfolio-red {
-  color:  #FF0000;
-  font-family: 'Londrina Solid', cursive;
-  font-weight: 800;
-  font-size: 30px;
-}
-
-.grub-n-go-orange{
-  color: #ff0000;
-}
-
-.adminLinks {
-  color: #376551;
-  font-family: cursive, 'Tangerine';
-  font-weight: 800;
-  font-size: 16px;
-}
-
-.nav-bar-bowfolio-red {
-  color:  #FF0000;
-  font-family: cursive, 'Tangerine';
-  font-weight: 800;
-  font-size: 16px;
-}
-
-.nav-bar-bowfolio-black {
-  color:  black;
-  font-family: cursive, 'Tangerine';
-  font-weight: 800;
-  font-size: 16px;
-}
-
-.landing-white-background {
-  background-color: white;
-  color: #376551;
-  margin: 0;
-}
-
-.reset-margins {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
+/*Backgrounds*/
 .welcome-background {
   background-size: cover;
   background-attachment: fixed;
   background-image: url(https://www.hawaiipokefob.com/img/slider3.jpg);
 }
 
+.pages-background{
+  background-color: #82A7A6;
+}
+
+/*Main Containers*/
+.containers {
+  background-color: #FBFBFB;
+  font-family: 'Montserrat', SansSerif;
+  font-size: 16px;
+  padding: 25px;
+}
+
+/*Menu Items*/
+.ui.borderless.top.fixed.menu {
+  box-shadow: none;
+  border: none;
+  font-family: 'Montserrat', SansSerif;
+  font-size: 15px;
+  background-color: #82A7A6;
+  padding: 0px;
+}
+
+#userProfileMenuItem, #venuesMenuItem, #todaysMenuMenuItem, #topPicks, #filterMenuItem, #AddVendor, #adminMenuItem, #login-dropdown, #navbar-current-user {
+  color: #0A3200;
+  background-color: transparent;
+}
+
+#userProfileMenuItem:hover, #venuesMenuItem:hover, #todaysMenuMenuItem:hover, #topPicks:hover, #filterMenuItem:hover, #AddVendor:hover, #adminMenuItem:hover, #login-dropdown:hover, #navbar-current-user:hover {
+  color: #FBFBFB;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+#search {
+  color: #0A3200;
+  background-color: #A0BBBA;
+  border: none;
+}
+
+#logo {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+/*Footer*/
 .green-gradient {
-  background: linear-gradient(to bottom, transparent, #376551);
+  background: linear-gradient(to bottom, transparent, #172121);
 }
 
 .footer-background {
-  background: #376551;
-  padding: 0;
-  color: white;
+  background: #172121;
+  padding: 20px;
 }
+
+#footer-header {
+  font-family: 'Montserrat', SansSerif;
+  color: #A0BBBA;
+}
+
+#crew {
+  font-family: 'Pacifico', SansSerif;
+  color: white;
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+/*Special Headers*/
+#aloha {
+  font-family: 'Pacifico', SansSerif;
+  color: #FEA82F;
+  padding: 0px;
+  font-size: 200px;
+  margin: 0px;
+}
+
+#accent-header {
+  font-family: 'Tangerine', SansSerif;
+  color: #B3001B;
+  font-weight: 700;
+  font-size: 100px;
+}
+
+/*Headers*/
+h1.ui.header {
+  font-family: 'Montserrat', SansSerif;
+  color: #5D5F71;
+  font-weight: 600;
+  padding: 0px;
+  font-size: 40px;
+  margin: 0px
+}
+
+h2.ui.header {
+  font-family: 'Montserrat', SansSerif;
+  color: #A0BBBA;
+  font-weight: 600;
+  padding: 0px;
+  font-size: 30px;
+  margin: 0px
+}
+
+h3.ui.header {
+  font-family: 'Montserrat', SansSerif;
+  color: #5D5F71;
+  font-weight: 600;
+  padding: 0px;
+  font-size: 25px;
+  margin: 0px
+}
+
+/*Today's Menu & Cards*/
+
+#cards, .cards, div.header, div.column{
+  font-family: 'Montserrat', SansSerif;
+  color: #5D5F71;
+}
+
+
+
 

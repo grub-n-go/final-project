@@ -63,7 +63,7 @@ class EditUSer extends React.Component {
     const profile = Profiles.collection.findOne({ email });
     const model = _.extend({}, profile, { interests, projects });
     return (
-      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+      <div className='pages-background' style={{ paddingTop: '20px' }}>
         <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Edit Your Profile</Header>
         <Grid id="EditUSer-page" container centered>
           <Grid.Column>

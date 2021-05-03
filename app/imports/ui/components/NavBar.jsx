@@ -3,63 +3,59 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
-import { Menu, Dropdown, Input, Container } from 'semantic-ui-react';
+import { Menu, Dropdown, Input, Container, Image } from 'semantic-ui-react';
 
 import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
   render() {
-    const menuStyle = { marginBottom: '0px' };
     return (
       <Container>
-        <Menu style={menuStyle} attached="top" borderless>
-          <Menu.Item position='left' as={NavLink} activeClassName="" exact to="/">
-            <span className='bowfolio-red'>Grub-n-Go</span>
+        <Menu fixed="top" borderless>
+          <Menu.Item position='right' id="logo" as={NavLink} activeClassName="" exact to="/">
+            <Image size='tiny' src="images/grub-n-go-inverted-logo.png"/>
           </Menu.Item>
 
           {this.props.currentUser ? (
-            <Menu.Item position='left' as={NavLink} id='userProfileMenuItem' activeClassName="active" exact to="/userprofile"
-              key='userprofile'><span className='nav-bar-bowfolio-red'>User Profile</span></Menu.Item>
+            <Menu.Item position='right' as={NavLink} id='userProfileMenuItem' activeClassName="active" exact to="/userprofile"
+              key='userprofile'><span>User Profile</span></Menu.Item>
           ) : ''}
 
-          <Menu.Item position='left' as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
-            <span className='nav-bar-bowfolio-red'>Venues</span>
+          <Menu.Item position='right' as={NavLink} id="venuesMenuItem" activeClassName="active" exact to="/venues" key='venues'>
+            <span>Venues</span>
           </Menu.Item>
 
-          <Menu.Item position='left' as={NavLink} id="todaysMenuMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
-            <span className='nav-bar-bowfolio-red'>Today&apos;s Menu</span>
+          <Menu.Item position='right' as={NavLink} id="todaysMenuMenuItem" activeClassName="active" exact to="/todaysMenu" key='todaysMenu'>
+            <span>Today&apos;s Menu</span>
           </Menu.Item>
 
-          <Menu.Item position='left' as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
-            <span className='nav-bar-bowfolio-red'>Top Picks</span>
+          <Menu.Item position='right' as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
+            <span>Top Picks</span>
           </Menu.Item>
 
           {this.props.currentUser ? (
-            [<Menu.Item position='left' as={NavLink} id="filterMenuItem" activeClassName="active"
-              exact to="/filter" key='filter'><span className='nav-bar-bowfolio-red'>Filter</span></Menu.Item>,
+            [<Menu.Item className='menu-item' position='right' as={NavLink} id="filterMenuItem" activeClassName="active"
+              exact to="/filter" key='filter'><span>Filter</span></Menu.Item>,
 
-            <Menu.Item as={NavLink} id="AddVendor" activeClassName="active" exact to="/AddVendor" key='AddVendor'>
-              <span className='nav-bar-bowfolio-red'>Vendor</span></Menu.Item>]
+            <Menu.Item position='right' as={NavLink} id="AddVendor" activeClassName="active" exact to="/AddVendor" key='AddVendor'>
+              <span>Vendor</span></Menu.Item>]
           ) : ''}
 
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-            <Menu.Item as={NavLink} activeClassName="active" id='adminMenuItem' exact to="/admin" key='admin'>
-              <span className='nav-bar-bowfolio-black'>
+            <Menu.Item position='right' as={NavLink} activeClassName="active" id='adminMenuItem' exact to="/admin" key='admin'>
+              <span>
                 Admin
               </span>
             </Menu.Item>
           ) : ''}
           <Menu.Item fitted position='right'>
-
-            <span>
-              <Input className='nav-bar-bowfolio-red' icon='search' placeholder='Search...' />
-            </span>
+            <Input id='search' icon='search' placeholder='Search...' />
           </Menu.Item>
 
-          <Menu.Item position='right'>
+          <Menu.Item id='dropdown' position='left'>
             {this.props.currentUser === '' ? (
-              <Dropdown className='grub-n-go-orange' id="login-dropdown" text="Login" pointing="top left" icon={'user'}>
+              <Dropdown id="login-dropdown" text="Login&nbsp;&nbsp;" pointing="top left" icon={'user'}>
                 <Dropdown.Menu floated>
                   <Dropdown.Item id="login-dropdown-sign-in" icon="user"
                     text="Sign In" as={NavLink} exact to="/signin"/>
@@ -71,7 +67,7 @@ class NavBar extends React.Component {
               </Dropdown>
 
             ) : (
-              <Dropdown className="grub-n-go-orange" id="navbar-current-user"
+              <Dropdown id="navbar-current-user"
                 text={this.props.currentUser} pointing="top left" icon={'user'}>
                 <Dropdown.Menu>
                   <Dropdown.Item id="navbar-sign-out" icon="sign out" text="Sign Out"

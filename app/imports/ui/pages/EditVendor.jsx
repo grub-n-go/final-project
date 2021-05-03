@@ -57,7 +57,7 @@ class EditVendor extends React.Component {
     const vendor = Vendors.collection.findOne({ email });
     const model = _.extend({}, vendor, { vendortypes });
     return (
-      <div className='welcome-background' style={{ paddingTop: '20px' }}>
+      <div className='pages-background' style={{ paddingTop: '20px' }}>
         <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Edit Your Vendor Profile</Header>
         <Grid id="EditUSer-page" container centered>
           <Grid.Column>

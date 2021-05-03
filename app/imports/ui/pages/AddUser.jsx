@@ -63,11 +63,11 @@ class AddUser extends React.Component {
     const profile = Profiles.collection.findOne({ email });
     const model = _.extend({}, profile, { interests, projects });
     return (
-      <div className='welcome-background' id='add-user-page' style={{ paddingTop: '20px' }}>
-        <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Welcome to Grub-n-Go</Header>
-        <Grid id="AddUser-page" container centered className='landing-white-background'>
+      <div className='pages-background' id='add-user-page' style={{ paddingTop: '20px' }}>
+        <Grid className='containers' id="AddUser-page" container centered>
           <Grid.Column>
             <AutoForm model={model} schema={bridge} onSubmit={data => this.submit(data)}>
+              <Header as="h1" textAlign="center">Welcome to Grub-n-Go</Header>
               <Header as="h2" textAlign="center" style={{ padding: '20px' }}>
                 Please enter your details to sign up and be part of our great community
               </Header>
