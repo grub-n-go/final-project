@@ -14,7 +14,7 @@
 /*Main Containers*/
 .containers {
   background-color: #FBFBFB;
-  font-family: 'Montserrat', SansSerif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   padding: 25px;
 }
@@ -23,10 +23,10 @@
 .ui.borderless.top.fixed.menu {
   box-shadow: none;
   border: none;
-  font-family: 'Montserrat', SansSerif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   background-color: #82A7A6;
-  padding: 0px;
+  padding: 0;
 }
 
 #userProfileMenuItem, #venuesMenuItem, #todaysMenuMenuItem, #topPicks, #filterMenuItem, #AddVendor, #adminMenuItem, #login-dropdown, #navbar-current-user {
@@ -49,7 +49,7 @@
 #logo {
   margin-right: 10px;
   margin-left: 10px;
-  padding: 0px;
+  padding: 0;
 }
 
 /*Footer*/
@@ -63,12 +63,12 @@
 }
 
 #footer-header {
-  font-family: 'Montserrat', SansSerif;
+  font-family: 'Montserrat', sans-serif;
   color: #A0BBBA;
 }
 
 #crew {
-  font-family: 'Pacifico', SansSerif;
+  font-family: 'Pacifico', sans-serif;
   color: white;
   padding-top: 15px;
   font-size: 20px;
@@ -76,15 +76,15 @@
 
 /*Special Headers*/
 #aloha {
-  font-family: 'Pacifico', SansSerif;
+  font-family: 'Pacifico', cursive;
   color: #FEA82F;
-  padding: 0px;
+  padding: 0;
   font-size: 200px;
-  margin: 0px;
+  margin: 0;
 }
 
 #accent-header {
-  font-family: 'Tangerine', SansSerif;
+  font-family: 'Tangerine', cursive;
   color: #B3001B;
   font-weight: 700;
   font-size: 100px;
@@ -92,36 +92,36 @@
 
 /*Headers*/
 h1.ui.header {
-  font-family: 'Montserrat', SansSerif;
+  font-family: 'Montserrat', sans-serif;
   color: #5D5F71;
   font-weight: 600;
-  padding: 0px;
+  padding: 0;
   font-size: 40px;
-  margin: 0px
+  margin: 0;
 }
 
 h2.ui.header {
-  font-family: 'Montserrat', SansSerif;
+  font-family: 'Montserrat', sans-serif;
   color: #A0BBBA;
   font-weight: 600;
-  padding: 0px;
+  padding: 0;
   font-size: 30px;
-  margin: 0px
+  margin: 0;
 }
 
 h3.ui.header {
-  font-family: 'Montserrat', SansSerif;
+  font-family: 'Montserrat', sans-serif;
   color: #5D5F71;
   font-weight: 600;
-  padding: 0px;
+  padding: 0;
   font-size: 25px;
-  margin: 0px
+  margin: 0;
 }
 
 /*Today's Menu & Cards*/
 
 #cards, .cards, div.header, div.column{
-  font-family: 'Montserrat', SansSerif;
+  font-family: 'Montserrat', sans-serif;
   color: #5D5F71;
 }
 
