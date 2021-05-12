@@ -131,6 +131,7 @@
   "defaultVendors": [
     {
       "vendorName": "Panda Express",
+      "role": "vendor",
       "vendorHours": "Monday – Friday: 10:00am – 2:00pm",
       "campusLocation": "Paradise Palms Café",
       "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/panda_logo.png",
@@ -144,6 +145,7 @@
     },
     {
       "vendorName": "Da Spot",
+      "role": "vendor",
       "vendorHours": "Monday – Friday: 8:00am – 4:00pm",
       "campusLocation": "Krauss Circle",
       "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png",
@@ -157,6 +159,7 @@
     },
     {
       "vendorName": "Le Crêpe Café",
+      "role": "vendor",
       "vendorHours": "Monday – Friday: 8:00am – 5:00pm",
       "campusLocation": "Paradise Palms Café",
       "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png",
@@ -169,6 +172,7 @@
     },
     {
       "vendorName": "L&L Hawaiian Barbecue",
+      "role": "vendor",
       "vendorHours": "Monday – Friday: 7:00am – 4:30pm",
       "campusLocation": "Athletic Complex, 2nd Floor & Paradise Palms Café",
       "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/landl_logo.png",

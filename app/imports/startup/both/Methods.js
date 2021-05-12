@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import { Roles } from 'meteor/alanning:roles';
 import { Projects } from '../../api/projects/Projects';
 import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
@@ -78,6 +79,14 @@ Meteor.methods({
     if (participants) {
       participants.map((participant) => ProfilesProjects.collection.insert({ project: name, profile: participant }));
     }
+  },
+});
+
+Meteor.methods({
+  addvendorrole: function () {
+    const user = Meteor.user();
+    Roles.createRole('vendor', { unlessExists: true });
+    Roles.addUsersToRoles(user, 'vendor');
   },
 });
 
