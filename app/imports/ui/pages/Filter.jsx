@@ -77,17 +77,21 @@ class Filter extends React.Component {
     const emails = _.pluck(VendorTypes.collection.find({ vendorType: { $in: this.state.vendorTypes } }).fetch(), 'vendor');
     const profileData = _.uniq(emails).map(email => getProfileData(email));
     return (
-      <Container id="filter-page">
-        <AutoForm schema={bridge} onSubmit={data => this.submit(data)} >
-          <Segment>
-            <MultiSelectField id='vendorTypes' name='vendorTypes' showInlineError={true} placeholder={'Interests'}/>
-            <SubmitField id='submit' value='Submit'/>
-          </Segment>
-        </AutoForm>
-        <Card.Group style={{ paddingTop: '10px' }}>
-          {_.map(profileData, (vendor, index) => <MakeCard key={index} vendor={vendor}/>)}
-        </Card.Group>
-      </Container>
+      <div className='pages-background' style={{ paddingTop: '20px' }}>
+        <Container id="filter-page">
+          <AutoForm schema={bridge} onSubmit={data => this.submit(data)} >
+            <Segment>
+              <MultiSelectField id='vendorTypes' name='vendorTypes' showInlineError={true} placeholder={'Interests'}/>
+              <SubmitField id='submit' value='Submit'/>
+            </Segment>
+          </AutoForm>
+          <Card.Group style={{ paddingTop: '10px' }}>
+            {_.map(profileData, (vendor, index) => <MakeCard key={index} vendor={vendor}/>)}
+          </Card.Group>
+        </Container>
+        <div className='green-gradient' style={{ paddingTop: '100px' }}/>
+        <div className='footer-background'/>
+      </div>
     );
   }
 }

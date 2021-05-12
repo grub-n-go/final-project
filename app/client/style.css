@@ -11,12 +11,17 @@
   background-color: #82A7A6;
 }
 
-/*Main Containers*/
+/*Containers*/
 .containers {
   background-color: #FBFBFB;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   padding: 25px;
+}
+
+.filter-container{
+  padding-top: 5em;
+  padding-bottom: 13em;
 }
 
 /*Menu Items*/
