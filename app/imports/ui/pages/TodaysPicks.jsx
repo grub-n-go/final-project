@@ -4,7 +4,7 @@ import { Container, Loader, Card, Image } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
-import { Interests } from '../../api/interests/Interests';
+import { VendorClass } from '../../api/interests/vendorClassifications';
 import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
@@ -48,7 +48,7 @@ class InterestsPage extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const interests = _.pluck(Interests.collection.find().fetch(), 'name');
+    const interests = _.pluck(VendorClass.collection.find().fetch(), 'vendor');
     const interestData = interests.map(interest => getInterestData(interest));
     return (
       <div className='pages-background' style={{ paddingTop: '20px' }}>
@@ -75,7 +75,7 @@ export default withTracker(() => {
   const sub2 = Meteor.subscribe(Projects.userPublicationName);
   const sub3 = Meteor.subscribe(ProjectsInterests.userPublicationName);
   const sub4 = Meteor.subscribe(Profiles.userPublicationName);
-  const sub5 = Meteor.subscribe(Interests.userPublicationName);
+  const sub5 = Meteor.subscribe(VendorClass.userPublicationName);
   const sub6 = Meteor.subscribe(ProfilesInterests.userPublicationName);
   return {
     ready: sub1.ready() && sub2.ready() && sub3.ready() && sub4.ready() && sub5.ready() && sub6.ready(),
