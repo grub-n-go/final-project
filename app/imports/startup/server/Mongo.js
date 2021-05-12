@@ -10,6 +10,7 @@ import { Interests } from '../../api/interests/Interests';
 import { VendorTypes } from '../../api/vendor/VendorTypes';
 import { VendorClass } from '../../api/interests/vendorClassifications';
 import { Vendors } from '../../api/vendor/Vendors';
+import { VendorMenus } from '../../api/vendor/VendorMenus';
 
 /* eslint-disable no-console */
 
@@ -100,6 +101,15 @@ if (Projects.collection.find().count() === 0) {
   if (Meteor.settings.defaultProjects) {
     console.log('Creating default Projects.');
     Meteor.settings.defaultProjects.map(project => addProject(project));
+  }
+}
+
+// Initialize the VendorMenusCollection if empty.
+if (VendorMenus.collection.find().count() === 0) {
+  if (Meteor.settings.defaultVendorMenus) {
+    console.log('Creating default vendor menus.');
+    // Create the profile.
+    Meteor.settings.defaultVendorMenus.map(vendorMenu => VendorMenus.collection.insert(vendorMenu));
   }
 }
 
