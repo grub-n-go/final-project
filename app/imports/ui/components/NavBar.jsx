@@ -31,7 +31,7 @@ class NavBar extends React.Component {
           </Menu.Item>
 
           <Menu.Item position='right' as={NavLink} id="topPicks" activeClassName="active" exact to="/topPicks" key='topPicks'>
-            <span>Top Picks</span>
+            <span>By Category</span>
           </Menu.Item>
 
           {this.props.currentUser ? (
