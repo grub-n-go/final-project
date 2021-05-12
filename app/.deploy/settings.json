@@ -188,6 +188,96 @@
       ]
     }
   ],
+  "defaultVendorMenus": [
+    {
+      "vendorName": "Le Crêpe Café",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png",
+      "menuTitle": "Savory Crepes",
+      "menu":  [
+        {
+          "menuItem": "Cheese Louise",
+          "menuItemDescription": "Mozzarella, jack, and cheddar cheese trio"
+        },
+        {
+          "menuItem": "Le Bacon",
+          "menuItemDescription": "Cheese trio, bacon, and egg"
+        },
+        {
+          "menuItem": "Popeye",
+          "menuItemDescription": "Mozzarella, spinach, mushrooms, and garlic"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Da Spot",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png",
+      "menuTitle": "Top Smoothies",
+      "menu":  [
+        {
+          "menuItem": "DaKine",
+          "menuItemDescription": "Strawberries, Bananas, Lilikoi Sorbet, Passion Orange Juice"
+        },
+        {
+          "menuItem": "Alohaberry",
+          "menuItemDescription": "Mixberries, Bananas, Haupia Sorbet, Guava Juice, Soymilk"
+        },
+        {
+          "menuItem": "Orange Sunset",
+          "menuItemDescription": "Peaches, Lychee Sorbet, Passion Orange Juice"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Panda Express",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/panda_logo.png",
+      "menuTitle": "Meal Deals",
+      "menu":  [
+        {
+          "menuItem": "Panda Bowl",
+          "menuItemDescription": "Any 1 Entrée & 1 Side"
+        },
+        {
+          "menuItem": "Family Feast",
+          "menuItemDescription": "3 Large Entrées & 2 Large Sides"
+        },
+        {
+          "menuItem": "A La Carte",
+          "menuItemDescription": "Any Side (large and single sizes), (Large side serves 2, large entrée serves 3-4), Any Entrée (large and single sizes)"
+        },
+        {
+          "menuItem": "Entrée List",
+          "menuItemDescription": "Orange chicken, String bean chicken breast, Beijing Beef, Broccoli Beef, SweetFire Chicken Breast, Mushroom Chicken, Black Pepper Chicken, Mandarin Chicken, Shanghai Angus Steak, 1 Chicken Egg Roll or 2 Veggie Spring Rolls, Kung Pao Chicken, Honey Walnut Shrimp"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "L&L Hawaiian Barbecue",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/landl_logo.png",
+      "menuTitle": "Surf or Turf options",
+      "menu":  [
+        {
+          "menuItem": "Chicken",
+          "menuItemDescription": "BBQ Chicken, Chicken Katsu, Chicken Cutlet, Cold Ginger Chicken, Spicy Chicken, Mochiko Chicken, Garlic Chicken, Fried Noodles"
+        },
+        {
+          "menuItem": "Beef",
+          "menuItemDescription": "Loco Moco, Hamburger Steak, Teriyaki Steak, BBQ Short Rib, Beef Stew, Steak Special"
+        },
+        {
+          "menuItem": "Pork",
+          "menuItemDescription": "Teriyaki Pork, Pork Katsu, Breaded Pork Chop, Kalua Pork, Laulau"
+        },
+        {
+          "menuItem": "Seafood",
+          "menuItemDescription": "Shrimp Curry, Fried Shrimp, Fried Mahimahi, Grilled Garlic Ahi, Seafood Saimin"
+        }
+      ]
+
+    }
+  ],
   "loadAssetsFile":  false
 }
 
