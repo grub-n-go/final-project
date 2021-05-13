@@ -10,7 +10,7 @@ import { VendorTypes } from '../../api/vendor/VendorTypes';
 /** Returns the Profile and associated Projects and Interests associated with the passed user email. */
 function getProfileData(email) {
   const data = Vendors.collection.findOne({ email });
-  const vendorType = _.pluck(VendorTypes.collection.find({ profile: email }).fetch(), 'vendorType');
+  const vendorType = _.pluck(VendorTypes.collection.find({ vendor: email }).fetch(), 'vendorType');
   const vendor = _.pluck(Vendors.collection.find({ profile: email }).fetch(), 'vendor');
   const pictures = vendor.map(project => Vendors.collection.findOne({ name: project }).picture);
   // console.log(_.extend({ }, data, { interests, projects: projectPictures }));
@@ -34,7 +34,7 @@ const MakeCard = (props) => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra id='cards'>
-      {_.map(props.profile.vendorTypes,
+      {_.map(props.profile.vendorType,
         (vendorType, index) => <Label key={index} size='tiny' color='teal'>{vendorType}</Label>)}
     </Card.Content>
   </Card>
