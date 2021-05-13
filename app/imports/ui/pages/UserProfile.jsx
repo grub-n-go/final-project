@@ -67,7 +67,7 @@ class UserProfile extends React.Component {
               <Grid.Column width={1}>
                 <Label attached='bottom right'>
                   <Icon name='setting' />
-                  <Link as={NavLink} id="EditUserMenuItem" activeClassName="active" exact to="/edituser" key='home'>Edit</Link>
+                  <Link as={NavLink} id="editUser-Button" activeClassName="active" exact to="/edituser" key='home'>Edit</Link>
                 </Label>
               </Grid.Column>
 

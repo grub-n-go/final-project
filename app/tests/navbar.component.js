@@ -25,6 +25,10 @@ class NavBar {
     await testController.click('#venuesMenuItem');
   }
 
+  async gotoByCategoryPage(testController) {
+    await testController.click('#topPicks');
+  }
+
   async gotoAdminPage(testController) {
     await testController.click('#adminMenuItem');
   }
@@ -33,16 +37,8 @@ class NavBar {
     await testController.click('#todaysMenuMenuItem');
   }
 
-  async gotoInterestsPage(testController) {
-    await testController.click('#interestsMenuItem');
-  }
-
-  async gotoProjectsPage(testController) {
-    await testController.click('#projectsMenuItem');
-  }
-
-  async gotoAddProjectPage(testController) {
-    await testController.click('#addProjectMenuItem');
+  async gotoVendorPage(testController) {
+    await testController.click('#addvendorMenuItem');
   }
 
   async gotoFilterPage(testController) {
