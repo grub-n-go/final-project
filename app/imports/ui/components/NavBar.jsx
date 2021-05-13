@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Menu, Dropdown, Container, Image } from 'semantic-ui-react';
+
 import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
@@ -11,8 +12,8 @@ class NavBar extends React.Component {
   render() {
     return (
       <Container>
-        <Menu fixed="top" borderless>
-          <Menu.Item position='right' id="logo" as={NavLink} activeClassName="" exact to="/">
+        <Menu fixed="top" borderless >
+          <Menu.Item position='right' id="logo" as={NavLink} activeClassName="" exact to="/" style={{ marginRight: '100px' }}>
             <Image size='tiny' src="images/grub-n-go-inverted-logo.png"/>
           </Menu.Item>
 
@@ -51,7 +52,7 @@ class NavBar extends React.Component {
             </Menu.Item>
           ) : ''}
 
-          <Menu.Item id='dropdown' position='left'>
+          <Menu.Item id='dropdown' position='left' style={{ marginLeft: '100px' }}>
             {this.props.currentUser === '' ? (
               <Dropdown id="login-dropdown" text="Login&nbsp;&nbsp;" pointing="top left" icon={'user'}>
                 <Dropdown.Menu floated>

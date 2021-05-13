@@ -24,7 +24,7 @@ const makeSchema = (allInterests, allProjects) => new SimpleSchema({
   bio: { type: String, label: 'Biographical statement', optional: true },
   title: { type: String, label: 'Title', optional: true },
   picture: { type: String, label: 'Picture URL', optional: true },
-  interests: { type: Array, label: 'Interests', optional: true },
+  interests: { type: Array, label: 'Preferred Foods', optional: true },
   'interests.$': { type: String, allowedValues: allInterests },
   projects: { type: Array, label: 'Projects', optional: true },
   'projects.$': { type: String, allowedValues: allProjects },
@@ -63,7 +63,7 @@ class EditUSer extends React.Component {
     const profile = Profiles.collection.findOne({ email });
     const model = _.extend({}, profile, { interests, projects });
     return (
-      <div className='pages-background' style={{ paddingTop: '20px' }}>
+      <div className='pages-background' id='edit-user-page' style={{ paddingTop: '20px' }}>
         <Header as="h2" textAlign="center" inverted style={{ fontSize: '100px' }}>Edit Your Profile</Header>
         <Grid id="EditUSer-page" container centered>
           <Grid.Column>
@@ -76,14 +76,13 @@ class EditUSer extends React.Component {
                 </Form.Group>
                 <LongTextField id='bio' name='bio' placeholder='Write a little bit about yourself.'/>
                 <Form.Group widths={'equal'}>
-                  <TextField name='title' showInlineError={true} placeholder={'Title'}/>
-                  <TextField name='picture' showInlineError={true} placeholder={'URL to picture'}/>
+                  <TextField id='title' name='title' showInlineError={true} placeholder={'Title'}/>
+                  <TextField id='picture' name='picture' showInlineError={true} placeholder={'URL to picture'}/>
                 </Form.Group>
                 <Form.Group widths={'equal'}>
-                  <MultiSelectField name='interests' showInlineError={true} placeholder={'Interests'}/>
-                  <MultiSelectField name='projects' showInlineError={true} placeholder={'Projects'}/>
+                  <MultiSelectField id='interests' name='interests' showInlineError={true} placeholder={'Preferred Foods'}/>
                 </Form.Group>
-                <SubmitField id='EditUSer-page-submit' value='Update'/>
+                <SubmitField id='editUser-page-submit' value='Update'/>
               </Segment>
             </AutoForm>
           </Grid.Column>

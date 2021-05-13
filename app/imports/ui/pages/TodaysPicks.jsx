@@ -46,7 +46,7 @@ class InterestsPage extends React.Component {
     const vendorTypes = _.pluck(VendorClass.collection.find().fetch(), 'vendor');
     const vendorTypeData = vendorTypes.map(vendorType => getInterestData(vendorType));
     return (
-      <div className='pages-background' style={{ paddingTop: '20px' }}>
+      <div id='byCategory-Page' className='pages-background' style={{ paddingTop: '20px' }}>
         <Container id="interests-page">
           <Card.Group>
             {_.map(vendorTypeData, (vendorType, index) => <MakeCard key={index} vendorType={vendorType}/>)}

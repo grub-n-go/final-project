@@ -45,14 +45,14 @@ class Admin extends React.Component {
     const vendorEmails = _.pluck(Vendors.collection.find().fetch(), 'email');
     const vendorData = vendorEmails.map(vendorEmail => getVendorData(vendorEmail));
     return (
-      <div id='pages-background' style={{ paddingTop: '20px' }}>
-        <Header as="h2" textAlign="center">List Of Users</Header>
+      <div className='pages-background' id='admin-page' style={{ paddingTop: '20px' }}>
+        <Header as="h1" textAlign="center" style={{ margin: '20px' }}>List Of Users</Header>
         <Container id="profiles-page">
           <Card.Group centered>
             {_.map(profileData, (userCard, index) => <UserCard key={index} userCard={userCard}/>)}
           </Card.Group>
         </Container>
-        <Header as="h2" textAlign="center">List Of Vendors</Header>
+        <Header as="h1" textAlign="center" style={{ margin: '20px' }}>List Of Vendors</Header>
         <Container id="profiles-page">
           <Card.Group centered>
             {_.map(vendorData, (vendorCard, index) => <VendorCard key={index} vendorCard={vendorCard}/>)}

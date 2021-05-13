@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Loader, Container, Image, Item, Label, Icon, Card } from 'semantic-ui-react';
+import { Grid, Header, Loader, Container, Image, Item, Label, Icon } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -10,16 +10,6 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { Projects } from '../../api/projects/Projects';
-import { Vendors } from '../../api/vendor/Vendors';
-import { VendorTypes } from '../../api/vendor/VendorTypes';
-import VendorCard from '../components/VendorCard';
-
-/** Gets the Project data as well as Profiles and Interests associated with the passed Project name. */
-function getVendorData(email) {
-  const data = Vendors.collection.findOne({ email });
-  const vendorType = _.pluck(VendorTypes.collection.find({ profile: email }).fetch(), 'vendorType');
-  return _.extend({ }, data, { vendorType });
-}
 
 /** Renders the UserProfile Page: what appears after the user logs in. */
 class UserProfile extends React.Component {
@@ -35,19 +25,18 @@ class UserProfile extends React.Component {
     // Create the form schema for uniforms. Need to determine all interests and projects for muliselect list.
     const interests = _.pluck(ProfilesInterests.collection.find({ profile: email }).fetch(), 'interest');
     const profile = Profiles.collection.findOne({ email });
-    const vendorEmails = _.pluck(VendorTypes.collection.find({ vendorType: { interests } }).fetch(), 'email');
-    const vendorData = vendorEmails.map(vendorEmail => getVendorData(vendorEmail));
+
     return (
       <div className='pages-background' id='userprofile-page' style={{ paddingTop: '50px' }}>
-        <Container className='containers'>
-          <Header id='welcome2' as="h2" inverted style={{ textAlign: 'center' }}>{profile.firstName}&nbsp;{profile.lastName}</Header>
+        <Container className='containers' >
+          <Header id='welcome2' as="h2" style={{ textAlign: 'center' }}>{profile.firstName}&nbsp;{profile.lastName}</Header>
           <Grid id="UserProfile-page" container centered>
 
             <Grid.Row>
-              <Grid.Column width={2}>
+              <Grid.Column width={5}>
                 <Image size='massive' src={profile.picture}/>
               </Grid.Column>
-              <Grid.Column width={4}>
+              <Grid.Column width={10}>
 
                 <Item.Group relaxed>
 
@@ -67,7 +56,7 @@ class UserProfile extends React.Component {
                   </Item>
 
                   <Item>
-                    <Item.Header as='h5'>Preferences:</Item.Header>
+                    <Item.Header as='h5'>Food Preferences:</Item.Header>
                     <Item.Content verticalAlign='middle'>{_.map(interests,
                       (interest, index) => <Label style={{ margin: '5px' }} key={index} size='large' color='teal'>{interest}</Label>)}</Item.Content>
                   </Item>
@@ -78,16 +67,8 @@ class UserProfile extends React.Component {
               <Grid.Column width={1}>
                 <Label attached='bottom right'>
                   <Icon name='setting' />
-                  <Link as={NavLink} id="EditUserMenuItem" activeClassName="active" exact to="/edituser" key='home'>Edit</Link>
+                  <Link as={NavLink} id="editUser-Button" activeClassName="active" exact to="/edituser" key='home'>Edit</Link>
                 </Label>
-              </Grid.Column>
-              <Grid.Column width={9}>
-                <Container centered>
-                  <Header id='welcome' as="h2" textAlign='center'>Favorites</Header>
-                  <Card.Group centered>
-                    {_.map(vendorData, (vendorCard, index) => <VendorCard key={index} vendorCard={vendorCard}/>)}
-                  </Card.Group>
-                </Container>
               </Grid.Column>
 
             </Grid.Row>

@@ -15,7 +15,7 @@ class FilterPage {
   async filter(testController) {
     await this.isDisplayed(testController);
     // Select visualization and submit
-    const interestsSelector = Selector('#interests');
+    const interestsSelector = Selector('#vendorTypes');
     const chineseOption = interestsSelector.find('#Chinese');
     await testController.click(interestsSelector);
     await testController.click(chineseOption);

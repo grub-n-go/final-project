@@ -56,10 +56,10 @@ const updateVendorMethod = 'Vendors.update';
  * updated situation specified by the user.
  */
 Meteor.methods({
-  'Vendors.update'({ email, vendorName, campusLocation, vendorHours, description, picture, vendorTypes }) {
+  'Vendors.update'({ email, vendorName, campusLocation, vendorHours, description, picture, vendorType }) {
     Vendors.collection.update({ email }, { $set: { email, vendorName, campusLocation, vendorHours, description, picture } });
     VendorTypes.collection.remove({ vendor: email });
-    vendorTypes.map((vendorType) => VendorTypes.collection.insert({ vendor: email, vendorType }));
+    vendorType.map((theVendorType) => VendorTypes.collection.insert({ vendor: email, vendorType: theVendorType }));
   },
 });
 

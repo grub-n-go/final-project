@@ -8,6 +8,7 @@ import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
 import { Vendors } from '../../api/vendor/Vendors';
 import { VendorTypes } from '../../api/vendor/VendorTypes';
 import { VendorClass } from '../../api/interests/vendorClassifications';
+import { VendorMenus } from '../../api/vendor/VendorMenus';
 
 /** Define a publication to publish all interests. */
 Meteor.publish(Interests.userPublicationName, () => Interests.collection.find());
@@ -35,6 +36,9 @@ Meteor.publish(Projects.userPublicationName, () => Projects.collection.find());
 
 /** Define a publication to publish this collection. */
 Meteor.publish(ProjectsInterests.userPublicationName, () => ProjectsInterests.collection.find());
+
+/** Define a publication to publish this collection. */
+Meteor.publish(VendorMenus.userPublicationName, () => VendorMenus.collection.find());
 
 // alanning:roles publication
 // Recommended code to publish roles for each user.

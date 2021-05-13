@@ -1,5 +1,4 @@
 {
-
   "defaultProfiles": [
     {
       "firstName": "Philip",
@@ -10,7 +9,7 @@
       "interests": [
         "Chinese"
       ],
-      "projects":[
+      "projects": [
         "RadGrad",
         "Open Power Quality"
       ],
@@ -26,7 +25,7 @@
         "Dessert",
         "Hawaiian"
       ],
-      "projects":[
+      "projects": [
         "WRENCH"
       ],
       "picture": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Henri_Casanova1.jpg",
@@ -41,7 +40,7 @@
         "French",
         "Chinese"
       ],
-      "projects":[
+      "projects": [
         "RadGrad"
       ],
       "picture": "https://cammoore.github.io/images/cam-moore.jpg",
@@ -56,7 +55,7 @@
         "Local",
         "Vegan"
       ],
-      "projects":[
+      "projects": [
         "Open Power Quality"
       ],
       "picture": "https://anthonyjchriste.github.io/images/me.png",
@@ -70,7 +69,7 @@
       "interests": [
         "Mediterranean"
       ],
-      "projects":[
+      "projects": [
         "Cyber Canoe"
       ],
       "picture": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Jason_Leigh-2014.jpg",
@@ -83,7 +82,7 @@
       "title": "Ph.D. (2020)",
       "interests": [
         "Open Power Quality"
-        ],
+      ],
       "picture": "https://sergey-negrashov.github.io/images/serge.jpg",
       "email": "sin8@hawaii.edu"
     }
@@ -182,7 +181,456 @@
         "Local",
         "Hawaiian"
       ]
+    },
+    {
+      "vendorName": "Holoholo Grill",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 7:00am – 6:30pm",
+      "campusLocation": "Paradise Palms Café",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/holoholo_logo.png",
+      "email": "holoholo@foo.com",
+      "description": "Holoholo Grill features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or catering for any sized group are also available!",
+      "vendorTypes": [
+        "Local",
+        "Hawaiian"
+      ]
+    },
+    {
+      "vendorName": "Ono Seafood",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 7:00am – 6:00pm",
+      "campusLocation": "Krauss Hall",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/onoseafood_logo.png",
+      "email": "onoseafood@foo.com",
+      "description": "Traditional super ono ahi & tako poke; always fresh, premium ahi — never frozen! Made to order poke by the pound & poke bowls.",
+      "vendorTypes": [
+        "Local",
+        "Hawaiian",
+        "Japanese"
+      ]
+    },
+    {
+      "vendorName": "Dunkin' Donuts",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 7:00am – 6:00pm",
+      "campusLocation": "Paradise Palms Café",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/dunkin_logo.png",
+      "email": "dunkin@foo.com",
+      "description": "Dunkin’ Donuts in Paradise Palms Cafe will keep Hawaii running with high-quality beverage offerings–including freshly-brewed Hot and Iced Coffees–paired perfectly with delicious donuts, bakery good, sandwiches and more.",
+      "vendorTypes": [
+        "Dessert",
+        "Sandwiches"
+      ]
+    },
+    {
+      "vendorName": "Island Pita",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 8:00am – 6:00pm",
+      "campusLocation": "TBA",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/08/islandPita_logo.png",
+      "email": "islandpita@foo.com",
+      "description": "Mobile eatery serving Mediterranean cuisine like chicken and lamb kabob as well as with vegan options such as hummus, Israeli salad, falafel, and fresh baked pita made daily.",
+      "vendorTypes": [
+        "Mediterranean",
+        "Sandwiches",
+        "Vegan"
+      ]
+    },
+    {
+      "vendorName": "Kamitoku Ramen",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 8:00am – 7:00pm",
+      "campusLocation": "Post (Monday, Tuesday, Thursday, Friday) & Krauss Hall (Wednesday)",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/kamitoku_logo.png",
+      "email": "kamitoku@foo.com",
+      "description": "Kamitoku Ramen specializes in a Tottori-style beef bone ramen.",
+      "vendorTypes": [
+        "Japanese"
+      ]
+    },
+    {
+      "vendorName": "The Bean Counter",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 8:00am – 7:00pm",
+      "campusLocation": "Shidler College of Business, 1st Floor",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/beancounter_logo.png",
+      "email": "beancounter@foo.com",
+      "description": "Local beans, local flavor…your local coffee bar.\n\nThe Bean Counter serves up brewed coffee from the Hawaiian Islands and fulfills your caffeinated desires with a full service espresso bar. Feed your growling stomach with a dizzying array of bagels with homemade spreads, or chow down with our savory wraps, healthy salads and sweet treats.",
+      "vendorTypes": [
+        "Beverages",
+        "Vegan",
+        "Desserts"
+      ]
+    },
+    {
+      "vendorName": "Govinda's",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 11:00am – 2:00pm",
+      "campusLocation": "Sustainability Courtyard",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/govindas_logo.png",
+      "email": "govindas@foo.com",
+      "description": "Want a sustainable selection for lunch? Try Govinda’s, which offers a 100% pure vegetarian menu, with items low in cholesterol and mostly organic. They strive to bring you a healthy and delicious meal at the best possible price.",
+      "vendorTypes": [
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "vendorName": "Hot Taco's",
+      "role": "vendor",
+      "vendorHours": "Friday: 12:00pm - 6:00pm, Saturday - Sunday: 11:00am - 6:00pm",
+      "campusLocation": "Rotating between Kennedy Theatre (Monday), Post (Tuesday), Kuykendall (Wednesday), Architecture (Thursday), and Korean Studies (Friday)",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/hottacos_logo.png",
+      "email": "hottacos@foo.com",
+      "description": "Hot Tacos offers authentic Mexican food, prepped and cooked daily from scratch offering tacos, burritos, and quesadillas with meat options like steak, chicken, marinated pork, and shredded beef. They offer a la carte options or lunch plates that include beans and Spanish rice and other add on options like Chili Rellenos and Tamales.",
+      "vendorTypes": [
+        "Mexican"
+      ]
+    },
+    {
+      "vendorName": "Lasoon",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 10:30am – 4:00pm",
+      "campusLocation": "Paradise Palms Café",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lasoon_logo.png",
+      "email": "lasoon@foo.com",
+      "description": "Lasoon offers natural home-cooked Nepali and Indian food for everyone. From a $5 bowl options when you are in a hurry to larger plates to please your appetite.",
+      "vendorTypes": [
+        "Himalayan/Nipalese",
+        "Indian"
+      ]
+    },
+    {
+      "vendorName": "Sistah Truck",
+      "role": "vendor",
+      "vendorHours": "Tuesday: 9:00am - 5:00pm, Wednesday - Friday: 11:00am - 10:00pm",
+      "campusLocation": "Rotating between POST, Kuykendall, Architecture, Korean Studies, and Kennedy Theatre",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/sistah_logo.png",
+      "email": "sistahtruck@foo.com",
+      "description": "Sistah Truck serves Korean-inspired local cuisine. Daily menu plate lunches include loco moco, chicken katsu, and Korean-style shoyu chicken. They also serve grab-and-go dishes like bibimbap, gyoza and kimchi bowls. Vegetarian options are available.",
+      "vendorTypes": [
+        "Korean",
+        "Local"
+      ]
     }
   ],
-  "loadAssetsFile":  false
+  "defaultVendorMenus": [
+    {
+      "vendorName": "Le Crêpe Café",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lecrepe_logo.png",
+      "menuTitle": "Savory Crepes",
+      "menu":  [
+          {
+            "menuItem": "Cheese Louise",
+            "menuItemDescription": "Mozzarella, jack, and cheddar cheese trio"
+          },
+          {
+            "menuItem": "Le Bacon",
+            "menuItemDescription": "Cheese trio, bacon, and egg"
+          },
+          {
+            "menuItem": "Popeye",
+            "menuItemDescription": "Mozzarella, spinach, mushrooms, and garlic"
+          }
+        ]
+
+    },
+    {
+      "vendorName": "Da Spot",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/daspot_logo.png",
+      "menuTitle": "Top Smoothies",
+      "menu":  [
+        {
+        "menuItem": "DaKine",
+        "menuItemDescription": "Strawberries, Bananas, Lilikoi Sorbet, Passion Orange Juice"
+        },
+        {
+          "menuItem": "Alohaberry",
+          "menuItemDescription": "Mixberries, Bananas, Haupia Sorbet, Guava Juice, Soymilk"
+        },
+        {
+          "menuItem": "Orange Sunset",
+          "menuItemDescription": "Peaches, Lychee Sorbet, Passion Orange Juice"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Panda Express",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/panda_logo.png",
+      "menuTitle": "Meal Deals",
+      "menu":  [
+        {
+          "menuItem": "Panda Bowl",
+          "menuItemDescription": "Any 1 Entrée & 1 Side"
+        },
+        {
+          "menuItem": "Family Feast",
+          "menuItemDescription": "3 Large Entrées & 2 Large Sides"
+        },
+        {
+          "menuItem": "A La Carte",
+          "menuItemDescription": "Any Side (large and single sizes), (Large side serves 2, large entrée serves 3-4), Any Entrée (large and single sizes)"
+        },
+        {
+          "menuItem": "Entrée List",
+          "menuItemDescription": "Orange chicken, String bean chicken breast, Beijing Beef, Broccoli Beef, SweetFire Chicken Breast, Mushroom Chicken, Black Pepper Chicken, Mandarin Chicken, Shanghai Angus Steak, 1 Chicken Egg Roll or 2 Veggie Spring Rolls, Kung Pao Chicken, Honey Walnut Shrimp"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "L&L Hawaiian Barbecue",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/landl_logo.png",
+      "menuTitle": "Surf or Turf options",
+      "menu":  [
+        {
+          "menuItem": "Chicken",
+          "menuItemDescription": "BBQ Chicken, Chicken Katsu, Chicken Cutlet, Cold Ginger Chicken, Spicy Chicken, Mochiko Chicken, Garlic Chicken, Fried Noodles"
+        },
+        {
+          "menuItem": "Beef",
+          "menuItemDescription": "Loco Moco, Hamburger Steak, Teriyaki Steak, BBQ Short Rib, Beef Stew, Steak Special"
+        },
+        {
+          "menuItem": "Pork",
+          "menuItemDescription": "Teriyaki Pork, Pork Katsu, Breaded Pork Chop, Kalua Pork, Laulau"
+        },
+        {
+          "menuItem": "Seafood",
+          "menuItemDescription": "Shrimp Curry, Fried Shrimp, Fried Mahimahi, Grilled Garlic Ahi, Seafood Saimin"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Holoholo Grill",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/holoholo_logo.png",
+      "menuTitle": "Keep it Local",
+      "menu":  [
+        {
+          "menuItem": "Assorted wraps",
+          "menuItemDescription": "Choose between Tuna Melt Panini, Turkey Avocado Bomb Panini, Chicken Chipotle Panini, Grilled Cheese Panini"
+        },
+        {
+          "menuItem": "Salad of the Day",
+          "menuItemDescription": "For vegans or people on a healthy diet!"
+        },
+        {
+          "menuItem": "Smoothies and Milk Teas",
+          "menuItemDescription": "A variety of different smoothies and Boba drinks!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Ono Seafood",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/onoseafood_logo.png",
+      "menuTitle": "Free drink with poke bowl!",
+      "menu":  [
+        {
+          "menuItem": "Ahi",
+          "menuItemDescription": "Shoyu Ahi, Hawaiian Style Ahi, Miso Ahi, Spicy Ahi, Wasabi Ahi"
+        },
+        {
+          "menuItem": "Tako",
+          "menuItemDescription": "Shoyu Tako, Hawaiian Style Tako, Miso Tako"
+        },
+        {
+          "menuItem": "Choose between",
+          "menuItemDescription": "White or brown rice, one or two poke styles, size and more!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Dunkin' Donuts",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/dunkin_logo.png",
+      "menuTitle": "America's Favorite Coffee, Espresso and Donuts",
+      "menu":  [
+        {
+          "menuItem": "Donuts",
+          "menuItemDescription": "A wide variety of different types and flavors!"
+        },
+        {
+          "menuItem": "Coffee",
+          "menuItemDescription": "Hot Coffee, Iced Coffee, Blended Coffee"
+        },
+        {
+          "menuItem": "Other",
+          "menuItemDescription": "Breakfast & Lunch sandwiches!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Island Pita",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/08/islandPita_logo.png",
+      "menuTitle": "Mediterranean cuisines",
+      "menu":  [
+        {
+          "menuItem": "Sandwiches",
+          "menuItemDescription": "Falafel (vegan), Chicken Shawarma, Lamb Kebab, Chicken Kebab, Chicken Schnitzel (fried chicken breast)"
+        },
+        {
+          "menuItem": "Plates",
+          "menuItemDescription": "All plates come with hummus, Tahina sauce drizzled with olive oil, Israeli salad, pickled red cabbage, rice and freshly baked pita bread. Spice it up with our home made hot sauce!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Kamitoku Ramen",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/kamitoku_logo.png",
+      "menuTitle": "Tottori-style beef bone Ramen",
+      "menu":  [
+        {
+          "menuItem": "Ramen",
+          "menuItemDescription": "Beefy Wild, Beefy Lite, Beefy Miso, Beefy Spicy, Special Ramen"
+        },
+        {
+          "menuItem": "Sides",
+          "menuItemDescription": "Pork Gyoza"
+        },
+        {
+          "menuItem": "Extra Toppings",
+          "menuItemDescription": "Menma, Green Onion, Tamago, Moyashi, Beef Chuck"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "The Bean Counter",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/beancounter_logo.png",
+      "menuTitle": "Menu",
+      "menu":  [
+        {
+          "menuItem": "Coffee/Iced Coffee",
+          "menuItemDescription": "Americana, Cappuccino, Latte, Mocha, Macchiato, Espresso shot"
+        },
+        {
+          "menuItem": "Coffee Alternatives",
+          "menuItemDescription": "Hot Chocolate, Flavored Steamer, Chai Latte"
+        },
+        {
+          "menuItem": "Tea/Misto",
+          "menuItemDescription": "Hot or Iced Tea, Tea Misto, Flavored Tea"
+        },
+        {
+          "menuItem": "Food",
+          "menuItemDescription": "Club wrap, Veggie Wrap, Local green salad, Chipotle Corn Salad"
+        },
+        {
+          "menuItem": "Desserts/Snacks",
+          "menuItemDescription": "Cupcakes, Chocolate Peanut Butter Cookies, Oatmeal"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Govinda's",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/govindas_logo.png",
+      "menuTitle": "Menu Daily Specials",
+      "menu":  [
+        {
+          "menuItem": "Monday",
+          "menuItemDescription": "Kabocha Coconut Curry, Cauliflower Pea Curry, Khichri, Strawberry Halava"
+        },
+        {
+          "menuItem": "Tuesday",
+          "menuItemDescription": "Kofta Cabbage Coconut Curry, Eggplant Potato Curry, Cranberry Orange nuts Halava, Khichri"
+        },
+        {
+          "menuItem": "Wednesday",
+          "menuItemDescription": "Yellow Thai Curry, Chickpea Spinach Curry, Khichri, Peanut Butter Halava"
+        },
+        {
+          "menuItem": "Thursday",
+          "menuItemDescription": "Red Thai Curry, String Bean Potato Curry, Khichri, Pineapple Coconut Halava"
+        },
+        {
+          "menuItem": "Friday",
+          "menuItemDescription": "Chili Beans, Cabbage Potato Curry, Khichri, Mixed Berry Halava"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Hot Taco's",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/hottacos_logo.png",
+      "menuTitle": "Menu Plates",
+      "menu":  [
+        {
+          "menuItem": "Sides",
+          "menuItemDescription": "Rice and Beans"
+        },
+        {
+          "menuItem": "Choice of Meats",
+          "menuItemDescription": "Carne Asada (steak), Al Pastor (marinated pork), Lengua (beef tongue), Birria (slow cooked beef stew with Mexican spices)"
+        },
+        {
+          "menuItem": "12 inch Burrito",
+          "menuItemDescription": "Flour tortilla with choice of meat, whole pinto beans, seasoned Mexican rice, with fresh chopped cilantro and onions, cheese, and sour cream. Add guacamole for extra."
+        },
+        {
+          "menuItem": "Quesadilla",
+          "menuItemDescription": "Strips of folded 12″ flour tortilla with melted Mexican cheese, fresh chopped cilantro, and onions"
+        },
+        {
+          "menuItem": "Tamales",
+          "menuItemDescription": "Cooked in corn husks, prepared with corn meal dough filled with a savory filling"
+        },
+        {
+          "menuItem": "Chile Rellenos",
+          "menuItemDescription": "Poblano pepper stuffed with queso fresco, topped with red or green sauce, melted Monterey cheese, sour cream, cilantro, and onions. Served with rice, beans, and two tortillas."
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Lasoon",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lasoon_logo.png",
+      "menuTitle": "Menu",
+      "menu":  [
+        {
+          "menuItem": "Vegan/Vegetarian",
+          "menuItemDescription": "Daal (Lentils), Chana Masala (Chickpeas), Rajma (Red Kidney beans), Bodi (Black eyed peas), Jackfruit Curry, Cabbage Bhaji, Saag Tofu (Spinach), Aloo Gobi (Cauliflower & Potato), Mixed Vegetables, Brussels Sprouts"
+        },
+        {
+          "menuItem": "Meat",
+          "menuItemDescription": "Chicken Curry, Butter Chicken, Lamb Masala, Spicy Fish, Pork Vindaloo"
+        },
+        {
+          "menuItem": "Appetizers/Sides",
+          "menuItemDescription": "Samosa (Puffed pastry stuffed with potatoes), Roti (Indian bread), Jasmine Rice"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Sistah Truck",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/sistah_logo.png",
+      "menuTitle": "Menu",
+      "menu":  [
+        {
+          "menuItem": "Daily Specials",
+          "menuItemDescription": "Steak Plate, Wagyu LocoMoco Plate, Chicken Katsu Plate, Shoyu Chicken Plate, Fish Jun Plate, Spicy Pork Plate"
+        },
+        {
+          "menuItem": "Bowl",
+          "menuItemDescription": "Kalbi Bibimbap Bowl, Bibimbap Bowl, Teriyaki Gyoza Bowl, Fried Rice Bowl"
+        },
+        {
+          "menuItem": "Other",
+          "menuItemDescription": "Wagyu Mushroom Cheeseburger with French Fries, Garlic Butter Fries (fries upgrade)"
+        },
+        {
+          "menuItem": "Side",
+          "menuItemDescription": "Teriyaki Gyoza (7 pcs), French Fries, Garlic Butter French Fries, Homemade Kimchi"
+        }
+      ]
+
+    }
+  ],
+  "loadAssetsFile": false
 }
