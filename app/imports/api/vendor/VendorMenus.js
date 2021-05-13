@@ -13,7 +13,7 @@ class VendorMenusCollection {
     const menuSchema = new SimpleSchema({
       menuItem: String,
       menuItemDescription: String,
-    })
+    });
     this.schema = new SimpleSchema({
       vendorName: String,
       vendorPicture: String,
