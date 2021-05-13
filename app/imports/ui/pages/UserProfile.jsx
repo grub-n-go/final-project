@@ -56,7 +56,7 @@ class UserProfile extends React.Component {
                   </Item>
 
                   <Item>
-                    <Item.Header as='h5'>Preferences:</Item.Header>
+                    <Item.Header as='h5'>Food Preferences:</Item.Header>
                     <Item.Content verticalAlign='middle'>{_.map(interests,
                       (interest, index) => <Label style={{ margin: '5px' }} key={index} size='large' color='teal'>{interest}</Label>)}</Item.Content>
                   </Item>

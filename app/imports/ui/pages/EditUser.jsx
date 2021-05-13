@@ -24,7 +24,7 @@ const makeSchema = (allInterests, allProjects) => new SimpleSchema({
   bio: { type: String, label: 'Biographical statement', optional: true },
   title: { type: String, label: 'Title', optional: true },
   picture: { type: String, label: 'Picture URL', optional: true },
-  interests: { type: Array, label: 'Interests', optional: true },
+  interests: { type: Array, label: 'Preferred Foods', optional: true },
   'interests.$': { type: String, allowedValues: allInterests },
   projects: { type: Array, label: 'Projects', optional: true },
   'projects.$': { type: String, allowedValues: allProjects },
@@ -80,8 +80,7 @@ class EditUSer extends React.Component {
                   <TextField name='picture' showInlineError={true} placeholder={'URL to picture'}/>
                 </Form.Group>
                 <Form.Group widths={'equal'}>
-                  <MultiSelectField name='interests' showInlineError={true} placeholder={'Interests'}/>
-                  <MultiSelectField name='projects' showInlineError={true} placeholder={'Projects'}/>
+                  <MultiSelectField name='interests' showInlineError={true} placeholder={'Preferred Foods'}/>
                 </Form.Group>
                 <SubmitField id='EditUSer-page-submit' value='Update'/>
               </Segment>
