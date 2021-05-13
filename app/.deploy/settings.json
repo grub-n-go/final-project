@@ -247,6 +247,69 @@
       "vendorTypes": [
         "Japanese"
       ]
+    },
+    {
+      "vendorName": "The Bean Counter",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 8:00am – 7:00pm",
+      "campusLocation": "Post (Monday, Tuesday, Thursday, Friday) & Krauss Hall (Wednesday)",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/kamitoku_logo.png",
+      "email": "kamitoku@foo.com",
+      "description": "Kamitoku Ramen specializes in a Tottori-style beef bone ramen.",
+      "vendorTypes": [
+        "Japanese"
+      ]
+    },
+    {
+      "vendorName": "Govinda's",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 11:00am – 2:00pm",
+      "campusLocation": "Sustainability Courtyard",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/govindas_logo.png",
+      "email": "govindas@foo.com",
+      "description": "Want a sustainable selection for lunch? Try Govinda’s, which offers a 100% pure vegetarian menu, with items low in cholesterol and mostly organic. They strive to bring you a healthy and delicious meal at the best possible price.",
+      "vendorTypes": [
+        "Vegetarian",
+        "Vegan"
+      ]
+    },
+    {
+      "vendorName": "Hot Taco's",
+      "role": "vendor",
+      "vendorHours": "Friday: 12:00pm - 6:00pm, Saturday - Sunday: 11:00am - 6:00pm",
+      "campusLocation": "Rotating between Kennedy Theatre (Monday), Post (Tuesday), Kuykendall (Wednesday), Architecture (Thursday), and Korean Studies (Friday)",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/hottacos_logo.png",
+      "email": "hottacos@foo.com",
+      "description": "Hot Tacos offers authentic Mexican food, prepped and cooked daily from scratch offering tacos, burritos, and quesadillas with meat options like steak, chicken, marinated pork, and shredded beef. They offer a la carte options or lunch plates that include beans and Spanish rice and other add on options like Chili Rellenos and Tamales.",
+      "vendorTypes": [
+        "Mexican"
+      ]
+    },
+    {
+      "vendorName": "Lasoon",
+      "role": "vendor",
+      "vendorHours": "Monday – Friday: 10:30am – 4:00pm",
+      "campusLocation": "Paradise Palms Café",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/lasoon_logo.png",
+      "email": "lasoon@foo.com",
+      "description": "Lasoon offers natural home-cooked Nepali and Indian food for everyone. From a $5 bowl options when you are in a hurry to larger plates to please your appetite.",
+      "vendorTypes": [
+        "Himalayan/Nipalese",
+        "Indian"
+      ]
+    },
+    {
+      "vendorName": "Sistah Truck",
+      "role": "vendor",
+      "vendorHours": "Tuesday: 9:00am - 5:00pm, Wednesday - Friday: 11:00am - 10:00pm",
+      "campusLocation": "Rotating between POST, Kuykendall, Architecture, Korean Studies, and Kennedy Theatre",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/sistah_logo.png",
+      "email": "sistahtruck@foo.com",
+      "description": "Sistah Truck serves Korean-inspired local cuisine. Daily menu plate lunches include loco moco, chicken katsu, and Korean-style shoyu chicken. They also serve grab-and-go dishes like bibimbap, gyoza and kimchi bowls. Vegetarian options are available.",
+      "vendorTypes": [
+        "Korean",
+        "Local"
+      ]
     }
   ],
   "defaultVendorMenus": [

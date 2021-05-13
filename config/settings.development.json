@@ -496,6 +496,26 @@
         }
       ]
 
+    },
+    {
+      "vendorName": "Kamitoku Ramen",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/kamitoku_logo.png",
+      "menuTitle": "Tottori-style beef bone Ramen",
+      "menu":  [
+        {
+          "menuItem": "Ramen",
+          "menuItemDescription": "Beefy Wild, Beefy Lite, Beefy Miso, Beefy Spicy, Special Ramen"
+        },
+        {
+          "menuItem": "Sides",
+          "menuItemDescription": "Pork Gyoza"
+        },
+        {
+          "menuItem": "Extra Toppings",
+          "menuItemDescription": "Menma, Green Onion, Tamago, Moyashi, Beef Chuck"
+        }
+      ]
+
     }
   ],
   "loadAssetsFile": false
