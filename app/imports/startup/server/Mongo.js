@@ -16,11 +16,20 @@ import { VendorMenus } from '../../api/vendor/VendorMenus';
 
 /** Define a user in the Meteor accounts package. This enables login. Username is the email address. */
 function createUser(email, role) {
+  console.log(` Creating user ${email}.`);
   const userID = Accounts.createUser({ username: email, email, password: 'foo' });
   if (role === 'admin') {
     Roles.createRole(role, { unlessExists: true });
     Roles.addUsersToRoles(userID, 'admin');
+    console.log(`${email} role: admin`);
   }
+
+  if (role === 'vendor') {
+    Roles.createRole(role, { unlessExists: true });
+    Roles.addUsersToRoles(userID, 'vendor');
+    console.log(`${email} role: vendor`);
+  }
+
 }
 
 /** Define an interest.  Has no effect if interest already exists. */
