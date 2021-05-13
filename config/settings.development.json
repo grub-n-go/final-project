@@ -177,6 +177,77 @@
         "Local",
         "Hawaiian"
       ]
+    },
+    {
+      "vendorName": "Holoholo Grill",
+      "vendorHours": "Monday – Friday: 7:00am – 6:30pm",
+      "campusLocation": "Paradise Palms Café",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/holoholo_logo.png",
+      "email": "holoholo@foo.com",
+      "description": "Holoholo Grill features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or catering for any sized group are also available!",
+      "vendorTypes": [
+        "Local",
+        "Hawaiian"
+      ]
+    },
+    {
+      "vendorName": "Ono Seafood",
+      "vendorHours": "Monday – Friday: 7:00am – 6:00pm",
+      "campusLocation": "Krauss Hall",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/onoseafood_logo.png",
+      "email": "onoseafood@foo.com",
+      "description": "Traditional super ono ahi & tako poke; always fresh, premium ahi — never frozen! Made to order poke by the pound & poke bowls.",
+      "vendorTypes": [
+        "Local",
+        "Hawaiian",
+        "Japanese"
+      ]
+    },
+    {
+      "vendorName": "Dunkin' Donuts",
+      "vendorHours": "Monday – Friday: 7:00am – 6:00pm",
+      "campusLocation": "Paradise Palms Café",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/dunkin_logo.png",
+      "email": "dunkin@foo.com",
+      "description": "Dunkin’ Donuts in Paradise Palms Cafe will keep Hawaii running with high-quality beverage offerings–including freshly-brewed Hot and Iced Coffees–paired perfectly with delicious donuts, bakery good, sandwiches and more.",
+      "vendorTypes": [
+        "Dessert",
+        "Sandwiches"
+      ]
+    },
+    {
+      "vendorName": "Island Pita",
+      "vendorHours": "Monday – Friday: 8:00am – 6:00pm",
+      "campusLocation": "TBA",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/08/islandPita_logo.png",
+      "email": "islandpita@foo.com",
+      "description": "Mobile eatery serving Mediterranean cuisine like chicken and lamb kabob as well as with vegan options such as hummus, Israeli salad, falafel, and fresh baked pita made daily.",
+      "vendorTypes": [
+        "Mediterranean",
+        "Sandwiches"
+      ]
+    },
+    {
+      "vendorName": "Kamitoku Ramen",
+      "vendorHours": "Monday – Friday: 8:00am – 7:00pm",
+      "campusLocation": "Post (Monday, Tuesday, Thursday, Friday) & Krauss Hall (Wednesday)",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/kamitoku_logo.png",
+      "email": "kamitoku@foo.com",
+      "description": "Kamitoku Ramen specializes in a Tottori-style beef bone ramen.",
+      "vendorTypes": [
+        "Japanese"
+      ]
+    },
+    {
+      "vendorName": "The Bean Counter",
+      "vendorHours": "Monday – Friday: 8:00am – 7:00pm",
+      "campusLocation": "Post (Monday, Tuesday, Thursday, Friday) & Krauss Hall (Wednesday)",
+      "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/kamitoku_logo.png",
+      "email": "kamitoku@foo.com",
+      "description": "Kamitoku Ramen specializes in a Tottori-style beef bone ramen.",
+      "vendorTypes": [
+        "Japanese"
+      ]
     }
   ],
   "defaultVendorMenus": [
@@ -264,6 +335,102 @@
         {
           "menuItem": "Seafood",
           "menuItemDescription": "Shrimp Curry, Fried Shrimp, Fried Mahimahi, Grilled Garlic Ahi, Seafood Saimin"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Holoholo Grill",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/holoholo_logo.png",
+      "menuTitle": "Keep it Local",
+      "menu":  [
+        {
+          "menuItem": "Assorted wraps",
+          "menuItemDescription": "Choose between Tuna Melt Panini, Turkey Avocado Bomb Panini, Chicken Chipotle Panini, Grilled Cheese Panini"
+        },
+        {
+          "menuItem": "Salad of the Day",
+          "menuItemDescription": "For vegans or people on a healthy diet!"
+        },
+        {
+          "menuItem": "Smoothies and Milk Teas",
+          "menuItemDescription": "A variety of different smoothies and Boba drinks!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Ono Seafood",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/onoseafood_logo.png",
+      "menuTitle": "Free drink with poke bowl!",
+      "menu":  [
+        {
+          "menuItem": "Ahi",
+          "menuItemDescription": "Shoyu Ahi, Hawaiian Style Ahi, Miso Ahi, Spicy Ahi, Wasabi Ahi"
+        },
+        {
+          "menuItem": "Tako",
+          "menuItemDescription": "Shoyu Tako, Hawaiian Style Tako, Miso Tako"
+        },
+        {
+          "menuItem": "Choose between",
+          "menuItemDescription": "White or brown rice, one or two poke styles, size and more!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Dunkin' Donuts",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/dunkin_logo.png",
+      "menuTitle": "America's Favorite Coffee, Espresso and Donuts",
+      "menu":  [
+        {
+          "menuItem": "Donuts",
+          "menuItemDescription": "A wide variety of different types and flavors!"
+        },
+        {
+          "menuItem": "Coffee",
+          "menuItemDescription": "Hot Coffee, Iced Coffee, Blended Coffee"
+        },
+        {
+          "menuItem": "Other",
+          "menuItemDescription": "Breakfast & Lunch sandwiches!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Island Pita",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/08/islandPita_logo.png",
+      "menuTitle": "Mediterranean cuisines",
+      "menu":  [
+        {
+          "menuItem": "Sandwiches",
+          "menuItemDescription": "All pita sandwiches are made to order and loaded with hummus, Israeli salad (tomato + cucumber), pickled red cabbage, and drizzles with Tahina Sauce"
+        },
+        {
+          "menuItem": "Plates",
+          "menuItemDescription": "All plates come with hummus, Tahina sauce drizzled with olive oil, Israeli salad, pickled red cabbage, rice and freshly baked pita bread. Spice it up with our homemade sauce!"
+        }
+      ]
+
+    },
+    {
+      "vendorName": "Kamitoku Ramen",
+      "vendorPicture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/kamitoku_logo.png",
+      "menuTitle": "Tottori-style beef bone Ramen",
+      "menu":  [
+        {
+          "menuItem": "Ramen",
+          "menuItemDescription": "Beefy Wild, Beefy Lite, Beefy Miso, Beefy Spicy, Special Ramen"
+        },
+        {
+          "menuItem": "Sides",
+          "menuItemDescription": "Pork Gyoza"
+        },
+        {
+          "menuItem": "Extra Toppings",
+          "menuItemDescription": "Menma, Green Onion, Tamago, Moyashi, Beef Chuck"
         }
       ]
 
