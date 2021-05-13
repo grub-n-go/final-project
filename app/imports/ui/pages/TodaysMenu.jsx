@@ -11,11 +11,11 @@ import { VendorMenus } from '../../api/vendor/VendorMenus';
 /** Component for layout out a menu item row. */
 // eslint-disable-next-line no-unused-vars
 const MakeMenuRow = (props) => (
-    <Grid.Row centered>
-      <Grid.Column>{props.menu.menuItem}</Grid.Column>
-      <Grid.Column>{props.menu.menuItemDescription}</Grid.Column>
-    </Grid.Row>
-)
+  <Grid.Row centered>
+    <Grid.Column>{props.menu.menuItem}</Grid.Column>
+    <Grid.Column>{props.menu.menuItemDescription}</Grid.Column>
+  </Grid.Row>
+);
 MakeMenuRow.propTypes = {
   menu: PropTypes.object.isRequired,
 };
@@ -23,7 +23,7 @@ MakeMenuRow.propTypes = {
 /** Component for layout out a menu Card. */
 // eslint-disable-next-line no-unused-vars
 const MakeCard = (props) => (
-    <Grid.Row>
+  <Grid.Row>
     <Card fluid>
       <Segment>
         <Grid>
@@ -32,7 +32,7 @@ const MakeCard = (props) => (
               <Grid.Row><Header as='h3' textAlign='center'>{props.menuInfo.vendorName}</Header></Grid.Row>
               <Grid.Row>
                 <Image circular size='large'
-                       src={props.menuInfo.vendorPicture}/>
+                  src={props.menuInfo.vendorPicture}/>
               </Grid.Row>
             </Card.Content>
           </Grid.Column>
@@ -41,7 +41,7 @@ const MakeCard = (props) => (
               <Grid columns='equal' relaxed>
                 <Grid.Row><Header as='h3'>{props.menuInfo.menuTitle}</Header></Grid.Row>
                 {_.map(props.menuInfo.menu, (item, index) => <MakeMenuRow key={index}
-                                                                          menu={props.menuInfo.menu[index]}/>)}
+                  menu={props.menuInfo.menu[index]}/>)}
               </Grid>
             </Card.Content>
           </Grid.Column>
@@ -49,9 +49,8 @@ const MakeCard = (props) => (
 
       </Segment>
     </Card>
-    </Grid.Row>
+  </Grid.Row>
 );
-// {_.map(props.mealInfo.vendorsPictures, (p, index) => <Image key={index} circular size='mini' src={p}/>)}
 MakeCard.propTypes = {
   menuInfo: PropTypes.object.isRequired,
 };
@@ -66,22 +65,21 @@ class TodaysMenuPage extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const vendorMenus = _.map(VendorMenus.collection.find().fetch(), (vendorMenu, index) => {
-      return {"vendorName": vendorMenu["vendorName"],
-        "vendorPicture": vendorMenu["vendorPicture"],
-        "menuTitle": vendorMenu["menuTitle"],
-        "menu": vendorMenu["menu"]
-      }})
+    const vendorMenus = _.map(VendorMenus.collection.find().fetch(), (vendorMenu) => ({ vendorName: vendorMenu.vendorName,
+      vendorPicture: vendorMenu.vendorPicture,
+      menuTitle: vendorMenu.menuTitle,
+      menu: vendorMenu.menu,
+    }));
     return (
-        <div className='pages-background' id='todaysMenu-page' style={{ paddingTop: '20px' }}>
-          <Container id="projects-page" textAlign='centered'>
-            <Grid columns='equal'>
-              {_.map(vendorMenus, (menuInfo, index) => <MakeCard key={index} menuInfo={menuInfo}/>)}
-            </Grid>
-          </Container>
-          <div className='green-gradient' style={{ paddingTop: '100px' }}/>
-          <div className='footer-background'/>
-        </div>
+      <div className='pages-background' id='todaysMenu-page' style={{ paddingTop: '20px' }}>
+        <Container id="projects-page" textAlign='centered'>
+          <Grid columns='equal'>
+            {_.map(vendorMenus, (menuInfo, index) => <MakeCard key={index} menuInfo={menuInfo}/>)}
+          </Grid>
+        </Container>
+        <div className='green-gradient' style={{ paddingTop: '100px' }}/>
+        <div className='footer-background'/>
+      </div>
     );
   }
 }
