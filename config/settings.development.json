@@ -252,12 +252,14 @@
       "vendorName": "The Bean Counter",
       "role": "vendor",
       "vendorHours": "Monday – Friday: 8:00am – 7:00pm",
-      "campusLocation": "Post (Monday, Tuesday, Thursday, Friday) & Krauss Hall (Wednesday)",
+      "campusLocation": "Shidler College of Business, 1st Floor",
       "picture": "https://manoa.hawaii.edu/food/wp-content/uploads/sites/37/2020/05/beancounter_logo.png",
       "email": "beancounter@foo.com",
-      "description": "Kamitoku Ramen specializes in a Tottori-style beef bone ramen.",
+      "description": "Local beans, local flavor…your local coffee bar.\n\nThe Bean Counter serves up brewed coffee from the Hawaiian Islands and fulfills your caffeinated desires with a full service espresso bar. Feed your growling stomach with a dizzying array of bagels with homemade spreads, or chow down with our savory wraps, healthy salads and sweet treats.",
       "vendorTypes": [
-        "Japanese"
+        "Beverages",
+        "Vegan",
+        "Desserts"
       ]
     },
     {
