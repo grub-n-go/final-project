@@ -17,7 +17,7 @@ class NavBar extends React.Component {
             <Image size='tiny' src="images/grub-n-go-inverted-logo.png"/>
           </Menu.Item>
 
-          {this.props.currentUser ? (
+          {this.props.currentUser && !Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
             <Menu.Item position='right' as={NavLink} id='userProfileMenuItem' activeClassName="active" exact to="/userprofile"
               key='userprofile'><span>User Profile</span></Menu.Item>
           ) : ''}
@@ -39,7 +39,7 @@ class NavBar extends React.Component {
               exact to="/filter" key='filter'><span>Filter</span></Menu.Item>]
           ) : ''}
 
-          {this.props.currentUser ? (
+          {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
             [<Menu.Item className='add-vendor' position='right' as={NavLink} id="addvendorMenuItem" activeClassName="active"
               exact to="/addvendor" key='filter'><span>Vendor</span></Menu.Item>]
           ) : ''}
