@@ -233,7 +233,8 @@
       "description": "Mobile eatery serving Mediterranean cuisine like chicken and lamb kabob as well as with vegan options such as hummus, Israeli salad, falafel, and fresh baked pita made daily.",
       "vendorTypes": [
         "Mediterranean",
-        "Sandwiches"
+        "Sandwiches",
+        "Vegan"
       ]
     },
     {
@@ -404,11 +405,11 @@
       "menu":  [
         {
           "menuItem": "Sandwiches",
-          "menuItemDescription": "All pita sandwiches are made to order and loaded with hummus, Israeli salad (tomato + cucumber), pickled red cabbage, and drizzles with Tahina Sauce"
+          "menuItemDescription": "Falafel (vegan), Chicken Shawarma, Lamb Kebab, Chicken Kebab, Chicken Schnitzel (fried chicken breast)"
         },
         {
           "menuItem": "Plates",
-          "menuItemDescription": "All plates come with hummus, Tahina sauce drizzled with olive oil, Israeli salad, pickled red cabbage, rice and freshly baked pita bread. Spice it up with our homemade sauce!"
+          "menuItemDescription": "All plates come with hummus, Tahina sauce drizzled with olive oil, Israeli salad, pickled red cabbage, rice and freshly baked pita bread. Spice it up with our home made hot sauce!"
         }
       ]
 
